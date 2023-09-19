@@ -237,6 +237,6 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("SphereShape3D_b1417")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.891228, 0.453555, 0, -0.453555, 0.891228, 0.00337075, 0.323594, 0.496786)
+transform = Transform3D(1, 0, 0, 0, 0.930724, 0.365722, 0, -0.365722, 0.930724, 0.00337075, 0.352078, 0.564741)
 current = true
 fov = 84.2645

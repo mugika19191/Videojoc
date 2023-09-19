@@ -1,2 +1,4 @@
+res://pause.tscn
 res://node_3d.tscn
 res://character_body_3d.tscn
+res://pause.gd

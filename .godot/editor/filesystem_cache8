@@ -1,8 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1694976333
-CharacterBody3D.gd::GDScript::-1::1694817405::0::1::::<>CharacterBody3D<>::
-character_body_3d.tscn::PackedScene::2120326851182439003::1694817733::0::1::::<><>::res://CharacterBody3D.gd<>uid://crlt2hxdecd2g::::res://Small-8-Direction-Characters_by_AxulArt.png
-icon.svg::CompressedTexture2D::150029342840109149::1694775671::1694775682::1::::<><>::
-node_3d.tscn::PackedScene::1498764204673867675::1694817733::0::1::::<><>::uid://blkmjntn74ip::::res://skybox.jpeg<>uid://5hdqdkxolsdv::::res://character_body_3d.tscn
-skybox.jpeg::CompressedTexture2D::93526092061758979::1694810923::1694810938::1::::<><>::
-Small-8-Direction-Characters_by_AxulArt.png::CompressedTexture2D::5989962107161092376::1694808686::1694808717::1::::<><>::
+::res://::1695142885
+CharacterBody3D.gd::GDScript::-1::1695063268::0::1::::<>CharacterBody3D<>::
+character_body_3d.tscn::PackedScene::2120326851182439003::1695142635::0::1::::<><>::res://CharacterBody3D.gd<>uid://crlt2hxdecd2g::::res://Small-8-Direction-Characters_by_AxulArt.png
+icon.svg::CompressedTexture2D::150029342840109149::1695063268::1695063304::1::::<><>::
+node_3d.tscn::PackedScene::1498764204673867675::1695142635::0::1::::<><>::uid://blkmjntn74ip::::res://skybox.jpeg<>uid://5hdqdkxolsdv::::res://character_body_3d.tscn<>uid://jmhjsyctl5xv::::res://pause.tscn
+pause.gd::GDScript::-1::1695142419::0::1::::<>Control<>::
+pause.tscn::PackedScene::656914199497855715::1695142635::0::1::::<><>::res://pause.gd
+skybox.jpeg::CompressedTexture2D::93526092061758979::1695063268::1695063268::1::::<><>::
+Small-8-Direction-Characters_by_AxulArt.png::CompressedTexture2D::5989962107161092376::1695063268::1695063268::1::::<><>::
