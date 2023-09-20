@@ -1,19 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://vmaosfvj8h5l"]
+[gd_scene load_steps=6 format=3 uid="uid://vmaosfvj8h5l"]
 
-[ext_resource type="Texture2D" uid="uid://blkmjntn74ip" path="res://skybox.jpeg" id="1_fqv2p"]
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://character_body_3d.tscn" id="1_mkuyj"]
+[ext_resource type="PackedScene" uid="uid://df2opv12nhotr" path="res://door.tscn" id="3_nn68d"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://pause.tscn" id="3_w5hks"]
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kmwlw"]
-panorama = ExtResource("1_fqv2p")
-filter = false
-
-[sub_resource type="Sky" id="Sky_26hmg"]
-sky_material = SubResource("PanoramaSkyMaterial_kmwlw")
+[sub_resource type="Sky" id="Sky_hgo0a"]
 
 [sub_resource type="Environment" id="Environment_o4unv"]
 background_mode = 2
-sky = SubResource("Sky_26hmg")
+sky = SubResource("Sky_hgo0a")
 
 [node name="Prototype" type="Node3D"]
 
@@ -21,7 +16,7 @@ sky = SubResource("Sky_26hmg")
 environment = SubResource("Environment_o4unv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(0.498871, 0.0127578, 0.866582, -0.399271, 0.890847, 0.216736, -0.769227, -0.454125, 0.449512, 0.0549802, 0.744428, 1.51274)
+transform = Transform3D(0.999918, 0.00813276, 0.00990931, -0.0119366, 0.308793, 0.951054, 0.00467476, -0.951094, 0.308865, 1.81048, 3.9883, 4.81135)
 light_color = Color(0.917647, 0.901961, 0.913725, 1)
 shadow_enabled = true
 directional_shadow_mode = 1
@@ -46,3 +41,6 @@ transform = Transform3D(-0.179999, 0, 8.69415e-08, 0, 7, 0, -1.57361e-08, 0, -0.
 transform = Transform3D(2.3604e-08, 0, 0.994493, 0, 7, 0, -0.179999, 0, 1.30412e-07, -0.0465016, 2.77731, 0.578388)
 
 [node name="Pause" parent="." instance=ExtResource("3_w5hks")]
+
+[node name="Node3D" parent="." instance=ExtResource("3_nn68d")]
+transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 0.156385, -3.37735)

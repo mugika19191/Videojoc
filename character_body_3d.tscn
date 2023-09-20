@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://5hdqdkxolsdv"]
+[gd_scene load_steps=31 format=3 uid="uid://5hdqdkxolsdv"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_8ws6q"]
 [ext_resource type="Texture2D" uid="uid://crlt2hxdecd2g" path="res://Small-8-Direction-Characters_by_AxulArt.png" id="2_kiqed"]
@@ -220,6 +220,8 @@ script = SubResource("GDScript_6r40c")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_b1417"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_rm66j"]
+
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_8ws6q")
 
@@ -240,3 +242,8 @@ shape = SubResource("SphereShape3D_b1417")
 transform = Transform3D(1, 0, 0, 0, 0.930724, 0.365722, 0, -0.365722, 0.930724, 0.00337075, 0.352078, 0.564741)
 current = true
 fov = 84.2645
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_rm66j")
