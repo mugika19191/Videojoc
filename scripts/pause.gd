@@ -1,5 +1,6 @@
 extends Control
 
+@export var transitionSpeed = 0
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -9,6 +10,11 @@ func _process(delta):
 			return
 		get_tree().paused = !get_tree().paused
 		visible=true
+	if visible:
+		if $TextureRect.modulate.a8<255:
+			$TextureRect.modulate.a8 = $TextureRect.modulate.a8+transitionSpeed
+	else:
+		$TextureRect.modulate.a8=0
 
 
 func _on_resume_pressed():

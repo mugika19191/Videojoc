@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://vmaosfvj8h5l"]
 
-[ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://character_body_3d.tscn" id="1_mkuyj"]
-[ext_resource type="PackedScene" uid="uid://df2opv12nhotr" path="res://door.tscn" id="3_nn68d"]
-[ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://pause.tscn" id="3_w5hks"]
+[ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_3why7"]
+[ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_d4klg"]
+[ext_resource type="PackedScene" uid="uid://df2opv12nhotr" path="res://nodos/door.tscn" id="3_jesuh"]
 
 [sub_resource type="Sky" id="Sky_hgo0a"]
 
@@ -22,7 +22,7 @@ shadow_enabled = true
 directional_shadow_mode = 1
 sky_mode = 1
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_mkuyj")]
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_3why7")]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(7.6687, 0, 0, 0, 0.112217, 0, 0, 0, 9.62947, 0, -0.181192, 0)
@@ -40,7 +40,8 @@ transform = Transform3D(-0.179999, 0, 8.69415e-08, 0, 7, 0, -1.57361e-08, 0, -0.
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGBox3D"]
 transform = Transform3D(2.3604e-08, 0, 0.994493, 0, 7, 0, -0.179999, 0, 1.30412e-07, -0.0465016, 2.77731, 0.578388)
 
-[node name="Pause" parent="." instance=ExtResource("3_w5hks")]
+[node name="Pause" parent="." instance=ExtResource("2_d4klg")]
+visible = false
 
-[node name="Node3D" parent="." instance=ExtResource("3_nn68d")]
+[node name="Node3D" parent="." instance=ExtResource("3_jesuh")]
 transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 0.156385, -3.37735)

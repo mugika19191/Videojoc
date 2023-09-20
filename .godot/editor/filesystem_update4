@@ -1,4 +1,5 @@
-res://pause.tscn
-res://node_3d.tscn
-res://character_body_3d.tscn
-res://door.tscn
+res://nodos/pause.tscn
+res://nodos/node_3d.tscn
+res://nodos/character_body_3d.tscn
+res://nodos/door.tscn
+res://scripts/pause.gd

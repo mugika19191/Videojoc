@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b07b01cla78b3"
-path.s3tc="res://.godot/imported/bocata.png-31f0ceef78044ca0d0e81558771a6251.s3tc.ctex"
+uid="uid://blkmjntn74ip"
+path.s3tc="res://.godot/imported/skybox.jpeg-fdd700380e1f1588b90b6f390d678dd2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://bocata.png"
-dest_files=["res://.godot/imported/bocata.png-31f0ceef78044ca0d0e81558771a6251.s3tc.ctex"]
+source_file="res://imagenes/skybox.jpeg"
+dest_files=["res://.godot/imported/skybox.jpeg-fdd700380e1f1588b90b6f390d678dd2.s3tc.ctex"]
 
 [params]
 

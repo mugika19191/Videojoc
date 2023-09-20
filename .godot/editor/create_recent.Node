@@ -1,13 +1,13 @@
+VBoxContainer
+TextureRect
+Sprite3D
 CollisionShape3D
 Area3D
 StaticBody3D
-Sprite3D
-TextureRect
 Sprite2D
 AnimatedSprite3D
 Label
 Button
-VBoxContainer
 FlowContainer
 CenterContainer
 ColorRect
