@@ -1,5 +1,7 @@
+res://mapas/node_3d.tscn
+res://mapas/testNivel.tscn
+res://mapas/Prototipo.tscn
+res://scripts/door.gd
 res://nodos/pause.tscn
-res://nodos/node_3d.tscn
 res://nodos/character_body_3d.tscn
 res://nodos/door.tscn
-res://scripts/pause.gd
