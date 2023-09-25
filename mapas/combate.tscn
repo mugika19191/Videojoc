@@ -32,22 +32,6 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 
-[sub_resource type="Animation" id="Animation_vmf4b"]
-resource_name = "enemigoDañado"
-length = 0.6
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("contenedorVillano/villano:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="Animation" id="Animation_m6dg7"]
 length = 0.001
 tracks/0/type = "value"
@@ -73,6 +57,22 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vmf4b"]
+resource_name = "enemigoDañado"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("contenedorVillano/villano:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_a14po"]
@@ -109,10 +109,14 @@ script = ExtResource("1_8a447")
 enemigo = ExtResource("2_y1nro")
 
 [node name="fondo" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 648.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_hdh0s")
+expand_mode = 3
 
 [node name="contenedorVillano" type="VBoxContainer" parent="."]
 layout_mode = 1
