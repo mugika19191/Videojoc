@@ -1,3 +1,10 @@
+Camera2D
+AnimationPlayer
+Label
+Panel
+Button
+HBoxContainer
+ProgressBar
 VBoxContainer
 TextureRect
 Sprite3D
@@ -6,8 +13,6 @@ Area3D
 StaticBody3D
 Sprite2D
 AnimatedSprite3D
-Label
-Button
 FlowContainer
 CenterContainer
 ColorRect

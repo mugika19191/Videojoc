@@ -22,6 +22,7 @@ directional_shadow_mode = 1
 sky_mode = 1
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_lm3cr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.02114)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(7.6687, 0, 0, 0, 0.112217, 0, 0, 0, 9.62947, 0, -0.181192, 0)

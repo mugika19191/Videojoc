@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dy0fxohvul4uo"]
+
+[ext_resource type="Script" path="res://scripts/enemigoBase.gd" id="1_n5k40"]
+[ext_resource type="Texture2D" uid="uid://bbnr74ve5pqu1" path="res://imagenes/skeletillo.png" id="2_hbtgq"]
+
+[resource]
+script = ExtResource("1_n5k40")
+name = "Esqueleto"
+sprite = ExtResource("2_hbtgq")
+vida = 25
+"daño" = 10

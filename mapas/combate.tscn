@@ -1,0 +1,321 @@
+[gd_scene load_steps=15 format=3 uid="uid://c5i88craack7d"]
+
+[ext_resource type="Script" path="res://mapas/combate.gd" id="1_8a447"]
+[ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
+[ext_resource type="Texture2D" uid="uid://bbnr74ve5pqu1" path="res://imagenes/skeletillo.png" id="2_6bp54"]
+[ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://skeleto.tres" id="2_y1nro"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mducp"]
+bg_color = Color(0.854902, 0, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x20"]
+bg_color = Color(0, 0.827451, 0, 1)
+border_width_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0yq0"]
+bg_color = Color(0, 0, 0, 0.72549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m36hl"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e2cj"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0413b"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="Animation" id="Animation_vmf4b"]
+resource_name = "enemigoDañado"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("contenedorVillano/villano:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_m6dg7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("contenedorVillano/villano:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a14po"]
+resource_name = "jugadorDañado"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-51, -21), Vector2(60, 28), Vector2(60, 28), Vector2(0, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qdk7x"]
+_data = {
+"RESET": SubResource("Animation_m6dg7"),
+"enemigoDañado": SubResource("Animation_vmf4b"),
+"jugadorDañado": SubResource("Animation_a14po")
+}
+
+[node name="combate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8a447")
+enemigo = ExtResource("2_y1nro")
+
+[node name="fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("1_hdh0s")
+
+[node name="contenedorVillano" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -155.5
+offset_right = 140.0
+offset_bottom = 155.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="contenedorVillano"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_mducp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1x20")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="contenedorVillano/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "PVs: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="villano" type="TextureRect" parent="contenedorVillano"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("2_6bp54")
+stretch_mode = 2
+
+[node name="panelJugador" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v0yq0")
+
+[node name="datosJugador" type="HBoxContainer" parent="panelJugador"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="panelJugador/datosJugador"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Jogador"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="panelJugador/datosJugador"]
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_mducp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_e1x20")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="panelJugador/datosJugador/ProgressBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "PVs: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="panelAcciones" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v0yq0")
+
+[node name="acciones" type="HBoxContainer" parent="panelAcciones"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = -17.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="golpear" type="Button" parent="panelAcciones/acciones"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
+text = "GOLPEAR"
+
+[node name="bloquear" type="Button" parent="panelAcciones/acciones"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
+text = "BLOQUEAR"
+
+[node name="huir" type="Button" parent="panelAcciones/acciones"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
+text = "HUIR"
+
+[node name="textBox" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 8.0
+offset_top = 13.0
+offset_right = -10.0
+offset_bottom = 154.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0413b")
+
+[node name="Label" type="Label" parent="textBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = -11.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Oh nyo! Un skelettor!"
+
+[node name="siguiente" type="Label" parent="textBox"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1095.0
+offset_top = 105.0
+offset_right = -19.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = ">>"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qdk7x")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed"]
+[connection signal="pressed" from="panelAcciones/acciones/bloquear" to="." method="_on_bloquear_pressed"]
+[connection signal="pressed" from="panelAcciones/acciones/huir" to="." method="_on_huir_pressed"]

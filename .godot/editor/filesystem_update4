@@ -1,7 +1,12 @@
-res://mapas/node_3d.tscn
-res://mapas/testNivel.tscn
-res://mapas/Prototipo.tscn
-res://scripts/door.gd
 res://nodos/pause.tscn
+res://mapas/Prototipo.tscn
 res://nodos/character_body_3d.tscn
 res://nodos/door.tscn
+res://mapas/testNivel.tscn
+res://nivel1.tscn
+res://mapas/combateTest.tscn
+res://mapas/combate.tscn
+res://mapas/combate.gd
+res://scripts/state.gd
+res://scripts/enemigoBase.gd
+res://skeleto.tres
