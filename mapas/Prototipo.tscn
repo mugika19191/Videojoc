@@ -43,5 +43,10 @@ transform = Transform3D(2.3604e-08, 0, 0.994493, 0, 7, 0, -0.179999, 0, 1.30412e
 [node name="Pause" parent="." instance=ExtResource("2_44ta0")]
 visible = false
 
-[node name="Node3D" parent="." instance=ExtResource("3_r4030")]
-transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 0.156385, -3.37735)
+[node name="puerta1" parent="." instance=ExtResource("3_r4030")]
+transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 0.156385, -3.55935)
+mapa = "testNivel"
+
+[node name="puerta2" parent="." instance=ExtResource("3_r4030")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26147, 0.348633, -3.5579)
+mapa = "Prototipo"

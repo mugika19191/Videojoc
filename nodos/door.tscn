@@ -22,6 +22,7 @@ transform = Transform3D(0.476191, 0, 0, 0, 1, 0, 0, 0, 0.588235, 0, 0, 0)
 texture = ExtResource("3_a2oyr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.322257, 0, 0, 0.149049)
 shape = SubResource("BoxShape3D_nw3dj")
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
