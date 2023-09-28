@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://c5i88craack7d"]
 
-[ext_resource type="Script" path="res://mapas/combate.gd" id="1_8a447"]
+[ext_resource type="Script" path="res://scripts/combate.gd" id="1_3ew02"]
 [ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
 [ext_resource type="Texture2D" uid="uid://bbnr74ve5pqu1" path="res://imagenes/skeletillo.png" id="2_6bp54"]
 [ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://skeleto.tres" id="2_y1nro"]
@@ -105,7 +105,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_8a447")
+script = ExtResource("1_3ew02")
 enemigo = ExtResource("2_y1nro")
 
 [node name="fondo" type="TextureRect" parent="."]

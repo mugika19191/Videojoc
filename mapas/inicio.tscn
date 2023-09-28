@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkkqmna8qou7q"]
+
+[ext_resource type="Script" path="res://scripts/inicio.gd" id="1_mmpl5"]
+[ext_resource type="ArrayMesh" uid="uid://babiqnvkw8dj5" path="res://modelos/tower.obj" id="2_nyu46"]
+[ext_resource type="ArrayMesh" uid="uid://0qt5i7hhwcsr" path="res://modelos/puente.obj" id="3_kk5p8"]
+[ext_resource type="Texture2D" uid="uid://bol8b4kn5wijv" path="res://imagenes/Dragon_Quest_Logo.png" id="4_y8rge"]
+
+[sub_resource type="Environment" id="Environment_x5tir"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_mmpl5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_x5tir")
+
+[node name="Tower" type="MeshInstance3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.104236, -1.19209e-07, -0.224582)
+mesh = ExtResource("2_nyu46")
+skeleton = NodePath("../..")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="WorldEnvironment"]
+transform = Transform3D(3.08444, 0, 0, 0, 0.262555, 0, 0, 0, 2.20761, -0.0241237, 0, -0.152726)
+
+[node name="Camera3D" type="Camera3D" parent="WorldEnvironment"]
+transform = Transform3D(0.999878, 0.00582129, 0.0144948, 0, 0.92796, -0.37268, -0.0156201, 0.372635, 0.927847, 0.151525, 0.0910531, 2.56835)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02686, 1.97564)
+
+[node name="Puente" type="MeshInstance3D" parent="WorldEnvironment"]
+transform = Transform3D(-1.59995, 0.000127676, 0.0113606, 0, 1.09987, -0.0229851, -0.0121194, -0.0168552, -1.49978, 0.13749, -0.395007, 1.62097)
+mesh = ExtResource("3_kk5p8")
+skeleton = NodePath("../..")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DragonQuestLogo" type="Sprite2D" parent="Control"]
+position = Vector2(577, 172)
+scale = Vector2(0.648954, 0.764509)
+texture = ExtResource("4_y8rge")
+
+[node name="Pulsa" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = 152.0
+offset_right = 76.0
+offset_bottom = 178.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "PULSA UN BOTON"
