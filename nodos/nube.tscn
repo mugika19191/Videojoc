@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://jnao70n8m2q8"]
+
+[ext_resource type="Texture2D" uid="uid://qqejag8s84ji" path="res://imagenes/FX_CloudAlpha03.jpg" id="1_ernie"]
+[ext_resource type="Script" path="res://scripts/cloudLogic.gd" id="2_x85m8"]
+
+[sub_resource type="Gradient" id="Gradient_pu0gc"]
+offsets = PackedFloat32Array(0, 0.195122, 0.707317, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jgo6b"]
+gradient = SubResource("Gradient_pu0gc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gign4"]
+emission_shape = 3
+emission_box_extents = Vector3(7, 7, 7)
+spread = 0.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_max = 0.05
+angular_velocity_max = 0.01
+angle_min = -3.0
+angle_max = 129.4
+color_ramp = SubResource("GradientTexture1D_jgo6b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a103x"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_ernie")
+albedo_texture_msdf = true
+billboard_mode = 1
+proximity_fade_distance = 0.0
+distance_fade_max_distance = 0.1
+
+[sub_resource type="QuadMesh" id="QuadMesh_5hwio"]
+material = SubResource("StandardMaterial3D_a103x")
+size = Vector2(5, 5)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 60
+lifetime = 90.0
+speed_scale = 10.0
+explosiveness = 0.67
+process_material = SubResource("ParticleProcessMaterial_gign4")
+draw_pass_1 = SubResource("QuadMesh_5hwio")
+script = ExtResource("2_x85m8")

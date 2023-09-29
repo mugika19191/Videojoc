@@ -1,11 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkkqmna8qou7q"]
+[gd_scene load_steps=9 format=3 uid="uid://bkkqmna8qou7q"]
 
 [ext_resource type="Script" path="res://scripts/inicio.gd" id="1_mmpl5"]
 [ext_resource type="ArrayMesh" uid="uid://babiqnvkw8dj5" path="res://modelos/tower.obj" id="2_nyu46"]
 [ext_resource type="ArrayMesh" uid="uid://0qt5i7hhwcsr" path="res://modelos/puente.obj" id="3_kk5p8"]
 [ext_resource type="Texture2D" uid="uid://bol8b4kn5wijv" path="res://imagenes/Dragon_Quest_Logo.png" id="4_y8rge"]
+[ext_resource type="Script" path="res://scripts/cloudSpwn.gd" id="5_m1hvm"]
+[ext_resource type="PackedScene" uid="uid://jnao70n8m2q8" path="res://nodos/nube.tscn" id="6_pdord"]
 
 [sub_resource type="Environment" id="Environment_x5tir"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7hnf"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0)
 
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_mmpl5")
@@ -19,10 +26,10 @@ mesh = ExtResource("2_nyu46")
 skeleton = NodePath("../..")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="WorldEnvironment"]
-transform = Transform3D(3.08444, 0, 0, 0, 0.262555, 0, 0, 0, 2.20761, -0.0241237, 0, -0.152726)
+transform = Transform3D(5.24814, 0, 0, 0, 1.35185, 0, 0, 0, 2.20761, -0.0241237, -0.547183, -0.152726)
 
 [node name="Camera3D" type="Camera3D" parent="WorldEnvironment"]
-transform = Transform3D(0.999878, 0.00582129, 0.0144948, 0, 0.92796, -0.37268, -0.0156201, 0.372635, 0.927847, 0.151525, 0.0910531, 2.56835)
+transform = Transform3D(0.999878, 0.00582131, 0.0144948, 0, 0.92796, -0.37268, -0.0156201, 0.372635, 0.927847, 0.151525, 0.0910531, 2.56835)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="WorldEnvironment"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02686, 1.97564)
@@ -40,11 +47,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DragonQuestLogo" type="Sprite2D" parent="Control"]
-position = Vector2(577, 172)
-scale = Vector2(0.648954, 0.764509)
-texture = ExtResource("4_y8rge")
-
 [node name="Pulsa" type="Label" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
@@ -59,3 +61,28 @@ offset_bottom = 178.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "PULSA UN BOTON"
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -579.0
+offset_top = -327.0
+offset_right = 578.0
+offset_bottom = 830.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_y8rge")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1.25906, -0.002645, 0, 0.00193268, 1.72115, 0.0280512, -6.51265e-05, -0.0579986, 0.832439, 0.569168, 3.12804, -5.49046)
+size = Vector3(1, 0.622803, 0.973104)
+material = SubResource("StandardMaterial3D_c7hnf")
+script = ExtResource("5_m1hvm")
+clouds = 1
+_cloud = ExtResource("6_pdord")
