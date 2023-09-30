@@ -6,21 +6,24 @@
 
 [node name="Node3D" type="Node3D"]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(34.9305, -0.0385863, 0.98825, 1.63935, 0.835375, -0.827381, -0.991821, 0.0218113, 33.4372, 2.38275, -0.205673, -0.778805)
-use_collision = true
-size = Vector3(1, 2, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="."]
-transform = Transform3D(0.473343, -0.149568, -10.2129, 0.00428778, 16.5113, -0.0925135, 6.5429, -1.49012e-08, 0.738908, -5.60718, 6.37627, -16.9564)
-use_collision = true
-size = Vector3(1, 1, 2.58261)
-
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_i0aml")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.02829, 0)
+transform = Transform3D(0.993227, 0.00162812, 0.116181, 0.00469647, 0.998522, -0.0541432, -0.116097, 0.0543221, 0.991751, 7.51941, 8.19508, -1.01394)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_egeb0")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 0.816954, 0.576703, 0, -0.576703, 0.816954, 3.3601, 32.7796, 2.59808)
+transform = Transform3D(1, 0, 0, 0, 0.816954, 0.576703, 0, -0.576703, 0.816954, -12.6399, 31.5466, 25.7676)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.999268, 0, 0.0382483, 0, 1, 0, -0.0382483, 0, 0.999268, 0.2964, 0.275428, -1.90056)
+use_collision = true
+size = Vector3(10.1441, 1, 10.6992)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.521842, 0, 4.77452)
+size = Vector3(11.1423, 11.2772, 1)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82999, 1.09993, 0.37274)
+size = Vector3(1, 10.0163, 11.5493)
