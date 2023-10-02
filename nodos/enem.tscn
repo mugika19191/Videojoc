@@ -22,3 +22,4 @@ transform = Transform3D(5.26093, 0, 0, 0, 6.68694, 0, 0, 0, 0.0461029, 0, 0, -0.
 shape = SubResource("BoxShape3D_c71tl")
 
 [connection signal="area_entered" from="Area3D2" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D2" to="." method="_on_area_3d_2_area_exited"]

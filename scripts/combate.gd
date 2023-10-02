@@ -58,6 +58,7 @@ func _on_huir_pressed():
 	printearTexto("Escapaste manin")
 	await Signal(self,"textbox_closed")
 	self.visible=false
+	$Camera2D.enabled=false
 	get_tree().paused=!get_tree().paused #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
 
 
@@ -76,7 +77,7 @@ func _on_golpear_pressed():
 		await Signal(self,"textbox_closed")
 		self.visible=false
 		get_tree().paused=!get_tree().paused
-	
+		$Camera2D.enabled=false
 	turno_enemigo()
 
 

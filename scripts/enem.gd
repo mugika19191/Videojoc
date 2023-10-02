@@ -20,13 +20,22 @@ func _process(delta: float) -> void:
 	# Mueve el objeto a la nueva posición
 	transform.origin.x = x
 	transform.origin.z = z
-
 	
-
-
-
-
+		
+			
+	
 func _on_area_3d_area_entered(area):
 	get_tree().paused=!get_tree().paused
 	var comateI := combate.instantiate()
 	add_child(comateI)
+	print(get_child_count())
+	
+	
+
+
+func _on_area_3d_2_area_exited(area):
+	var i = 0
+	while i<get_child_count():
+		print(get_child(i).name)
+		i+=1
+	remove_child(get_child(get_child_count()-1))
