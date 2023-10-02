@@ -243,7 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 0.930724, 0.365722, 0, -0.365722, 0.930724, 
 current = true
 fov = 84.2645
 
-[node name="Area3D" type="Area3D" parent="."]
+[node name="Area3D" type="Area3D" parent="." groups=["Player"]]
 transform = Transform3D(0.366455, 0, 0, 0, 0.292263, 0, 0, 0, 0.261032, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

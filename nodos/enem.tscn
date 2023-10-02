@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw3p6k5olohcm"]
+
+[ext_resource type="Script" path="res://scripts/enem.gd" id="1_mw45r"]
+[ext_resource type="PackedScene" uid="uid://c5i88craack7d" path="res://mapas/combate.tscn" id="2_6vn5d"]
+[ext_resource type="Texture2D" uid="uid://bfc6h0iou78ah" path="res://imagenes/1687461462_Final-Fantasy-16-La-madre-di-Clive-cosa-succede-ad.jpg" id="2_t6nmp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c71tl"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_mw45r")
+combate = ExtResource("2_6vn5d")
+
+[node name="Area3D2" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 6.89885, 0, 0, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D2"]
+transform = Transform3D(0.476191, 0, 0, 0, 1, 0, 0, 0, 0.588235, 0, 0, 0)
+texture = ExtResource("2_t6nmp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D2"]
+transform = Transform3D(5.26093, 0, 0, 0, 6.68694, 0, 0, 0, 0.0461029, 0, 0, -0.00212461)
+shape = SubResource("BoxShape3D_c71tl")
+
+[connection signal="area_entered" from="Area3D2" to="." method="_on_area_3d_area_entered"]

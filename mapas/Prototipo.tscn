@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://vmaosfvj8h5l"]
+[gd_scene load_steps=7 format=3 uid="uid://vmaosfvj8h5l"]
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_44ta0"]
 [ext_resource type="PackedScene" uid="uid://df2opv12nhotr" path="res://nodos/door.tscn" id="3_r4030"]
+[ext_resource type="PackedScene" uid="uid://cw3p6k5olohcm" path="res://nodos/enem.tscn" id="4_ow0ux"]
 
 [sub_resource type="Sky" id="Sky_hgo0a"]
 
@@ -23,7 +24,7 @@ directional_shadow_mode = 1
 sky_mode = 1
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ajtw4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00383568, 0.0272628, -0.00666344)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00383568, 0.0272628, -0.105667)
 
 [node name="NIVEL1" type="CSGBox3D" parent="."]
 transform = Transform3D(7.6687, 0, 0, 0, 0.112217, 0, 0, 0, 9.62947, -0.0375229, -0.0999578, -0.0300703)
@@ -53,7 +54,7 @@ size = Vector3(0.635816, 27.0747, 0.204408)
 visible = false
 
 [node name="puerta1" parent="." instance=ExtResource("3_r4030")]
-transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 2.03904, 6.92606)
+transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 0.0399127, -0.742231)
 mapa = "testNivel"
 
 [node name="puerta2" parent="." instance=ExtResource("3_r4030")]
@@ -84,6 +85,9 @@ size = Vector3(0.91405, 2.59694, 7.20215)
 [node name="CSGBox3D5" type="CSGBox3D" parent="NIVEL2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.12757, 0.247743, -5.04946)
 size = Vector3(1, 4.68428, 6.83434)
+
+[node name="DOÑA PUTA" parent="NIVEL2" instance=ExtResource("4_ow0ux")]
+transform = Transform3D(0.423888, 0, 0, 0, 0.226808, 0, 0, 0, 1, -0.10876, 1.07129, -0.392143)
 
 [node name="NIVEL2_1" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.39042, -0.553166, -12.6558)

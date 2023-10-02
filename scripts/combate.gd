@@ -57,7 +57,8 @@ func turno_enemigo():
 func _on_huir_pressed():
 	printearTexto("Escapaste manin")
 	await Signal(self,"textbox_closed")
-	get_tree().quit() #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
+	self.visible=false
+	get_tree().paused=!get_tree().paused #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
 
 
 func _on_golpear_pressed():
@@ -73,7 +74,8 @@ func _on_golpear_pressed():
 	if vidaActualEnemigo == 0:
 		printearTexto("Derrotaste al enemigo, ¡ENHORABUENA!")
 		await Signal(self,"textbox_closed")
-		get_tree().quit()
+		self.visible=false
+		get_tree().paused=!get_tree().paused
 	
 	turno_enemigo()
 
