@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_n5k40")
-name = "Esqueleto"
+nombre = "Enemy"
 sprite = ExtResource("2_hbtgq")
 vida = 25
 "daño" = 10

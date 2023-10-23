@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cw3p6k5olohcm"]
 
 [ext_resource type="Script" path="res://scripts/enem.gd" id="1_mw45r"]
-[ext_resource type="PackedScene" uid="uid://c5i88craack7d" path="res://mapas/combate.tscn" id="2_6vn5d"]
+[ext_resource type="PackedScene" uid="uid://c5i88craack7d" path="res://nodos/combate.tscn" id="2_6vn5d"]
 [ext_resource type="Texture2D" uid="uid://bfc6h0iou78ah" path="res://imagenes/1687461462_Final-Fantasy-16-La-madre-di-Clive-cosa-succede-ad.jpg" id="2_t6nmp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c71tl"]

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8oy1a4l2sddj"
-path.s3tc="res://.godot/imported/backgroundMenu.png-ea6430c49f3c8fad2db64b80af41be31.s3tc.ctex"
+uid="uid://bfc6h0iou78ah"
+path.s3tc="res://.godot/imported/enemy.jpg-d031e55cffdf13b2a43482ce40d964ae.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://imagenes/backgroundMenu.png"
-dest_files=["res://.godot/imported/backgroundMenu.png-ea6430c49f3c8fad2db64b80af41be31.s3tc.ctex"]
+source_file="res://imagenes/enemy.jpg"
+dest_files=["res://.godot/imported/enemy.jpg-d031e55cffdf13b2a43482ce40d964ae.s3tc.ctex"]
 
 [params]
 

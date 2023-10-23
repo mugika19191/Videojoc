@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://jnao70n8m2q8"]
 
-[ext_resource type="Texture2D" uid="uid://qqejag8s84ji" path="res://imagenes/FX_CloudAlpha03.jpg" id="1_ernie"]
+[ext_resource type="Texture2D" uid="uid://qqejag8s84ji" path="res://imagenes/clouds.jpg" id="1_ernie"]
 [ext_resource type="Script" path="res://scripts/cloudLogic.gd" id="2_x85m8"]
 
 [sub_resource type="Gradient" id="Gradient_pu0gc"]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://dohn1dg3k8of4"]
+
+[ext_resource type="Texture2D" uid="uid://dk1xrg8ll5o4w" path="res://imagenes/rpgportraits.png" id="1_2h0hh"]
+
+[sub_resource type="Gradient" id="Gradient_52s37"]
+offsets = PackedFloat32Array(0, 0.148387)
+colors = PackedColorArray(0, 0, 0, 0.392157, 1, 1, 1, 0.392157)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_q6mfc"]
+gradient = SubResource("Gradient_52s37")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="back" type="TextureRect" parent="Dialog"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 116.0
+offset_top = -265.0
+offset_right = -117.0
+offset_bottom = -57.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("GradientTexture2D_q6mfc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog/back"]
+texture_filter = 1
+position = Vector2(125, 105)
+scale = Vector2(4.69375, 4.31678)
+texture = ExtResource("1_2h0hh")
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 38)
+
+[node name="TextBox" type="RichTextLabel" parent="Dialog/back"]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 62.0
+offset_right = 875.0
+offset_bottom = 188.0
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 0
+theme_override_font_sizes/italics_font_size = 0
+theme_override_font_sizes/bold_italics_font_size = 0
+theme_override_font_sizes/mono_font_size = 0
+bbcode_enabled = true
+text = "Viva [wave]VOX[/wave]"
+
+[node name="Name" type="RichTextLabel" parent="Dialog/back"]
+offset_left = 236.0
+offset_top = 21.0
+offset_right = 864.0
+offset_bottom = 83.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/bold_font_size = 30
+bbcode_enabled = true
+text = "[b]Sasel[/b]"
