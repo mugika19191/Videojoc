@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bgk64it4hjn5j"]
+[gd_scene load_steps=3 format=3 uid="uid://b2irbkdtgx783"]
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_i0aml"]
 

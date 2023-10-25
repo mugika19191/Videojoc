@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkkqmna8qou7q"]
+[gd_scene load_steps=9 format=3 uid="uid://b8qb5pn0mrle5"]
 
 [ext_resource type="Script" path="res://scripts/inicio.gd" id="1_mmpl5"]
 [ext_resource type="ArrayMesh" uid="uid://babiqnvkw8dj5" path="res://modelos/tower.obj" id="2_nyu46"]
 [ext_resource type="ArrayMesh" uid="uid://0qt5i7hhwcsr" path="res://modelos/puente.obj" id="3_kk5p8"]
 [ext_resource type="Texture2D" uid="uid://bol8b4kn5wijv" path="res://imagenes/Dragon_Quest_Logo.png" id="4_y8rge"]
 [ext_resource type="Script" path="res://scripts/cloudSpwn.gd" id="5_m1hvm"]
-[ext_resource type="PackedScene" uid="uid://jnao70n8m2q8" path="res://nodos/nube.tscn" id="6_pdord"]
+[ext_resource type="PackedScene" path="res://nodos/nube.tscn" id="6_pdord"]
 
 [sub_resource type="Environment" id="Environment_x5tir"]
 

@@ -6,7 +6,7 @@ var vida_actual = 50
 var vida_max = 50
 var mana_actual = 30
 var mana_max = 30
-var daño = 10
+var daño = 0
 var des = 0
 var fue = 0
 var itg = 0
@@ -16,6 +16,13 @@ var defensa = 2
 var resistencias = []
 var pasivas = []
 var prob_bloqueo = 0
+var daños = {
+	"Base": 10,
+	"Distencia": 0,
+	"Melé": 0,
+	"Magico": 0,
+	"Crítico": 0
+}
 
 var inventario = {
 	"armadura": 304, #Ejemplo: la armadura 304 debería aumentar la vida_act a 62, y añadir la resistencia [Fuego]
@@ -45,6 +52,8 @@ func agregar_objeto_a_inventario(tipo_objeto, objeto_id):
 	# Después de agregar el objeto al inventario, recalculate las estadísticas del personaje
 	calcular_estadisticas()
 
+func calcular_dano():
+	print()
 
 func calcular_estadisticas():
 	#Reestablecemos las estadsticas a los valores base
