@@ -1,14 +1,8 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=6 format=3 uid="uid://vmaosfvj8h5l"]
-=======
 [gd_scene load_steps=19 format=3 uid="uid://vmaosfvj8h5l"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_44ta0"]
 [ext_resource type="PackedScene" uid="uid://df2opv12nhotr" path="res://nodos/door.tscn" id="3_r4030"]
-<<<<<<< Updated upstream
-=======
 [ext_resource type="PackedScene" uid="uid://cw3p6k5olohcm" path="res://nodos/enem.tscn" id="4_ow0ux"]
 [ext_resource type="PackedScene" uid="uid://dabale7tnn5cp" path="res://3dAssests/prepared/tiles_combined_mid_section.tscn" id="6_biqb6"]
 [ext_resource type="PackedScene" uid="uid://b5tvgrv70krpk" path="res://3dAssests/prepared/temple_pillar_full.tscn" id="7_2febl"]
@@ -25,7 +19,6 @@
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
 sky_horizon_color = Color(0, 0.721569, 0.909804, 1)
->>>>>>> Stashed changes
 
 [sub_resource type="Sky" id="Sky_hgo0a"]
 sky_material = SubResource("ProceduralSkyMaterial_ryq8w")
@@ -51,11 +44,7 @@ environment = SubResource("Environment_o4unv")
 transform = Transform3D(0.423888, 0, 0, 0, 0.226808, 0, 0, 0, 1, -0.10876, 0.993928, -24.3678)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_ajtw4")]
-<<<<<<< Updated upstream
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00383568, 0.0272628, -0.00666344)
-=======
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00383568, 0.219195, -0.105667)
->>>>>>> Stashed changes
 
 [node name="NIVEL1" type="CSGBox3D" parent="."]
 transform = Transform3D(7.6687, 0, 0, 0, 0.112217, 0, 0, 0, 9.62947, -0.0375229, -0.0999578, -0.0300703)
@@ -86,16 +75,13 @@ size = Vector3(0.635816, 27.0747, 0.204408)
 visible = false
 
 [node name="puerta1" parent="." instance=ExtResource("3_r4030")]
-<<<<<<< Updated upstream
-transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0, 2.03904, 6.92606)
-=======
 transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0.820759, 0.257582, 5.69417)
 visible = false
 mapa = "testNivel"
->>>>>>> Stashed changes
 
 [node name="puerta2" parent="." instance=ExtResource("3_r4030")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26147, 2.2084, 6.72673)
+mapa = "Prototipo"
 
 [node name="NIVEL2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.409593, -11.2315)
