@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://vmaosfvj8h5l"]
+[gd_scene load_steps=23 format=3 uid="uid://lp7qrrwi6ww3"]
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_44ta0"]
@@ -16,6 +16,9 @@
 [ext_resource type="PackedScene" uid="uid://dvutajdsd780m" path="res://3dAssests/base/temple_pillars/temple_door.tscn" id="14_ndhjl"]
 [ext_resource type="PackedScene" uid="uid://bqn01vvlql12f" path="res://3dAssests/base/temple_pillars/templearc_top.tscn" id="15_2qvkj"]
 [ext_resource type="AudioStream" uid="uid://o27rdg6ic88b" path="res://Musica/batayha.mp3" id="16_oo1bu"]
+[ext_resource type="PackedScene" uid="uid://cfu10364mn16b" path="res://3dAssests/prepared/temple_pillar_broken.tscn" id="17_uaygm"]
+[ext_resource type="PackedScene" uid="uid://dgei6i1r2qbts" path="res://3dAssests/prepared/temple_pillar_broken_2.tscn" id="18_roeea"]
+[ext_resource type="PackedScene" uid="uid://df44qbjskigqv" path="res://3dAssests/base/debris/temple_debris_1.tscn" id="19_fvdo7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -549,3 +552,39 @@ unit_size = 38.23
 autoplay = true
 emission_angle_enabled = true
 emission_angle_degrees = 64.9
+
+[node name="TemplePillarBroken" parent="." instance=ExtResource("17_uaygm")]
+transform = Transform3D(-8.15325e-09, 0, 0.226889, 0, 0.164279, 0, -0.186524, 0, -9.91764e-09, -9.96101, -0.0162514, -17.5276)
+
+[node name="TemplePillarBroken2" parent="." instance=ExtResource("17_uaygm")]
+transform = Transform3D(-0.00616474, 0, -0.226765, 0, 0.164279, 0, 0.186423, 0, -0.00749881, -7.32327, -0.0162514, -17.5276)
+
+[node name="TemplePillarBroken3" parent="." instance=ExtResource("18_roeea")]
+transform = Transform3D(-0.00289502, 0, -0.220788, 0, 0.0627261, 0, 0.224141, 0, -0.00285171, -9.87084, -0.050594, -15.0331)
+
+[node name="temple_debris_1" parent="." instance=ExtResource("19_fvdo7")]
+transform = Transform3D(0.327132, 0, -0.120387, 0, 0.211048, 0, 0.147767, 0, 0.266517, -6.62833, -0.0505942, -15.5324)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="."]
+transform = Transform3D(0.0273362, 0, -1.40962, 0, 0.305627, 0, 0.0521341, 0, 0.739124, -7.02372, -0.379457, -15.18)
+visible = false
+use_collision = true
+size = Vector3(11.5255, 5.04195, 0.462408)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="."]
+transform = Transform3D(0.000422291, 0, -1.2502, 0, 0.58588, 0, 0.0499896, 0, 0.0105613, -9.85857, -0.379457, -15.0223)
+visible = false
+use_collision = true
+size = Vector3(11.5255, 5.04195, 0.462408)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="."]
+transform = Transform3D(0.000422291, 0, -1.2502, 0, 0.58588, 0, 0.0499896, 0, 0.0105613, -9.97263, 0.429508, -17.5367)
+visible = false
+use_collision = true
+size = Vector3(11.5255, 5.04195, 0.462408)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="."]
+transform = Transform3D(0.000422291, 0, -1.2502, 0, 0.58588, 0, 0.0499896, 0, 0.0105613, -7.3504, 0.429508, -17.5367)
+visible = false
+use_collision = true
+size = Vector3(11.5255, 5.04195, 0.462408)

@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://vl483f6q4wsf"]
 
-[ext_resource type="Texture2D" uid="uid://bq77fvux6gu4d" path="res://assets/textures/WispyNoise.png" id="1_vssq8"]
+[ext_resource type="Texture2D" uid="uid://bq77fvux6gu4d" path="res://3dAssests/textures/WispyNoise.png" id="1_vssq8"]
 
 [sub_resource type="Shader" id="Shader_42o7g"]
 code = "shader_type spatial;

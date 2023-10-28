@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://cfu10364mn16b"]
 
-[ext_resource type="PackedScene" uid="uid://dnwbkra1eatlv" path="res://scenes/base/temple_pillars/temple_pillar_bottom.tscn" id="1_fbt72"]
-[ext_resource type="PackedScene" uid="uid://dgl0sx13yr3km" path="res://scenes/base/temple_pillars/temple_pillar_stone.tscn" id="2_myahv"]
-[ext_resource type="Material" uid="uid://b1j826thlvcx7" path="res://assets/materials/mat_temple.tres" id="3_igd1r"]
-[ext_resource type="PackedScene" uid="uid://bgnxaliul0eyn" path="res://scenes/base/temple_pillars/temple_pillar_end_broken.tscn" id="4_7n04i"]
+[ext_resource type="PackedScene" uid="uid://dnwbkra1eatlv" path="res://3dAssests/base/temple_pillars/temple_pillar_bottom.tscn" id="1_fbt72"]
+[ext_resource type="PackedScene" uid="uid://dgl0sx13yr3km" path="res://3dAssests/base/temple_pillars/temple_pillar_stone.tscn" id="2_myahv"]
+[ext_resource type="Material" uid="uid://b1j826thlvcx7" path="res://3dAssests/materials/mat_temple.tres" id="3_igd1r"]
+[ext_resource type="PackedScene" uid="uid://bgnxaliul0eyn" path="res://3dAssests/base/temple_pillars/temple_pillar_end_broken.tscn" id="4_7n04i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5dahi"]
 size = Vector3(1.95, 0.5, 1.95)

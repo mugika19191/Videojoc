@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d00h2ucy2bs7g"]
 
-[ext_resource type="PackedScene" uid="uid://cgpmpxufco116" path="res://assets/meshes/temple_debris_6.gltf" id="1_hht56"]
-[ext_resource type="Material" uid="uid://b1j826thlvcx7" path="res://assets/materials/mat_temple.tres" id="2_712bu"]
+[ext_resource type="PackedScene" uid="uid://cgpmpxufco116" path="res://3dAssests/meshes/temple_debris_6.gltf" id="1_hht56"]
+[ext_resource type="Material" uid="uid://b1j826thlvcx7" path="res://3dAssests/materials/mat_temple.tres" id="2_712bu"]
 
 [node name="temple_debris_6" instance=ExtResource("1_hht56")]
 

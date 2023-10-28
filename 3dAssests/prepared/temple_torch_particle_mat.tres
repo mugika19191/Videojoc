@@ -1,4 +1,4 @@
-[gd_resource type="ParticleProcessMaterial" load_steps=5 format=3 uid="uid://ba8wgyoqh8s68"]
+[gd_resource type="ParticleProcessMaterial" load_steps=5 format=3 uid="uid://531ffgu7kjw7"]
 
 [sub_resource type="Gradient" id="Gradient_pspmx"]
 offsets = PackedFloat32Array(0, 0.018797, 0.0639098, 0.101504, 0.18797, 0.25188, 1)
@@ -26,6 +26,7 @@ damping_max = 0.5
 scale_min = 0.2
 scale_max = 0.8
 scale_curve = SubResource("CurveTexture_kiyyi")
+color = Color(0.152941, 0.784314, 0.905882, 1)
 color_ramp = SubResource("GradientTexture1D_ia8bn")
 turbulence_enabled = true
 turbulence_noise_scale = 0.31

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgei6i1r2qbts"]
 
-[ext_resource type="PackedScene" uid="uid://dnwbkra1eatlv" path="res://scenes/base/temple_pillars/temple_pillar_bottom.tscn" id="1_amwty"]
-[ext_resource type="PackedScene" uid="uid://dgl0sx13yr3km" path="res://scenes/base/temple_pillars/temple_pillar_stone.tscn" id="2_t5fvu"]
-[ext_resource type="Material" uid="uid://b1j826thlvcx7" path="res://assets/materials/mat_temple.tres" id="3_qqqbe"]
+[ext_resource type="PackedScene" uid="uid://dnwbkra1eatlv" path="res://3dAssests/base/temple_pillars/temple_pillar_bottom.tscn" id="1_amwty"]
+[ext_resource type="PackedScene" uid="uid://dgl0sx13yr3km" path="res://3dAssests/base/temple_pillars/temple_pillar_stone.tscn" id="2_t5fvu"]
+[ext_resource type="Material" uid="uid://b1j826thlvcx7" path="res://3dAssests/materials/mat_temple.tres" id="3_qqqbe"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_5dahi"]
 size = Vector3(1.95, 0.5, 1.95)
