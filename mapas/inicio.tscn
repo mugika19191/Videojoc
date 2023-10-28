@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8qb5pn0mrle5"]
+[gd_scene load_steps=10 format=3 uid="uid://b8qb5pn0mrle5"]
 
 [ext_resource type="Script" path="res://scripts/inicio.gd" id="1_mmpl5"]
 [ext_resource type="ArrayMesh" uid="uid://babiqnvkw8dj5" path="res://modelos/tower.obj" id="2_nyu46"]
 [ext_resource type="ArrayMesh" uid="uid://0qt5i7hhwcsr" path="res://modelos/puente.obj" id="3_kk5p8"]
 [ext_resource type="Texture2D" uid="uid://bol8b4kn5wijv" path="res://imagenes/Dragon_Quest_Logo.png" id="4_y8rge"]
 [ext_resource type="Script" path="res://scripts/cloudSpwn.gd" id="5_m1hvm"]
-[ext_resource type="PackedScene" path="res://nodos/nube.tscn" id="6_pdord"]
+[ext_resource type="PackedScene" uid="uid://jnao70n8m2q8" path="res://nodos/nube.tscn" id="6_pdord"]
+[ext_resource type="AudioStream" uid="uid://cxbo26y82p0bb" path="res://Musica/Charla 1 o Intro.mp3" id="7_hd2dh"]
 
 [sub_resource type="Environment" id="Environment_x5tir"]
 
@@ -86,3 +87,7 @@ material = SubResource("StandardMaterial3D_c7hnf")
 script = ExtResource("5_m1hvm")
 clouds = 1
 _cloud = ExtResource("6_pdord")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_hd2dh")
+autoplay = true

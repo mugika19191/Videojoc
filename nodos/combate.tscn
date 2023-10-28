@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5i88craack7d"]
+[gd_scene load_steps=16 format=3 uid="uid://c5i88craack7d"]
 
 [ext_resource type="Script" path="res://scripts/combate.gd" id="1_3ew02"]
 [ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
 [ext_resource type="Texture2D" uid="uid://bbnr74ve5pqu1" path="res://imagenes/skeletillo.png" id="2_6bp54"]
 [ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://skeleto.tres" id="2_y1nro"]
+[ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_q4h4s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mducp"]
 bg_color = Color(0.854902, 0, 0.0980392, 1)
@@ -320,6 +321,10 @@ libraries = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_q4h4s")
+autoplay = true
 
 [connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/acciones/bloquear" to="." method="_on_bloquear_pressed"]

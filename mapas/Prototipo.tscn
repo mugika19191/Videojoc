@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://vmaosfvj8h5l"]
+[gd_scene load_steps=20 format=3 uid="uid://vmaosfvj8h5l"]
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_44ta0"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dc2kquulamku3" path="res://3dAssests/base/temple_pillars/templearc_bottom.tscn" id="13_lxmmm"]
 [ext_resource type="PackedScene" uid="uid://dvutajdsd780m" path="res://3dAssests/base/temple_pillars/temple_door.tscn" id="14_ndhjl"]
 [ext_resource type="PackedScene" uid="uid://bqn01vvlql12f" path="res://3dAssests/base/temple_pillars/templearc_top.tscn" id="15_2qvkj"]
+[ext_resource type="AudioStream" uid="uid://o27rdg6ic88b" path="res://Musica/batayha.mp3" id="16_oo1bu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -541,3 +542,10 @@ transform = Transform3D(0.218154, -0.0144048, -0.00356338, -0.00393276, -0.01156
 
 [node name="templearc_top3" parent="." instance=ExtResource("15_2qvkj")]
 transform = Transform3D(-0.218486, -0.00145046, -0.00356338, 0.00333357, 0.0118262, -0.229265, 0.00137115, -0.25988, -0.0104131, 0.046441, 2.64212, -14.5306)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("16_oo1bu")
+unit_size = 38.23
+autoplay = true
+emission_angle_enabled = true
+emission_angle_degrees = 64.9
