@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://fcjpud3fomag"]
+
+[ext_resource type="Script" path="res://scripts/enemigoBase.gd" id="1_xqeo2"]
+[ext_resource type="Texture2D" uid="uid://c880pge5a2ou7" path="res://imagenes/minotauroToken.png" id="2_0t8ae"]
+
+[resource]
+script = ExtResource("1_xqeo2")
+nombre = "Enemy"
+sprite = ExtResource("2_0t8ae")
+vida = 100
+"daño" = 15

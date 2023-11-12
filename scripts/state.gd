@@ -2,6 +2,7 @@ extends Node
 
 
 var objetos = preload("objetos.gd").new()
+var clase = 1
 var vida_actual = 50
 var vida_max = 50
 var mana_actual = 30

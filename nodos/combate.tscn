@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c5i88craack7d"]
+[gd_scene load_steps=17 format=3 uid="uid://c5i88craack7d"]
 
 [ext_resource type="Script" path="res://scripts/combate.gd" id="1_3ew02"]
 [ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
@@ -15,6 +15,9 @@ border_width_left = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0yq0"]
 bg_color = Color(0, 0, 0, 0.72549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s60gd"]
+bg_color = Color(0.713726, 0.694118, 0.141176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m36hl"]
 bg_color = Color(0, 0, 0, 1)
@@ -217,6 +220,30 @@ text = "PVs: 50/100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ProgressBar2" type="ProgressBar" parent="panelJugador/datosJugador"]
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_mducp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_s60gd")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="panelJugador/datosJugador/ProgressBar2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "PVs: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="panelAcciones" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -251,7 +278,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
 text = "GOLPEAR"
 
-[node name="bloquear" type="Button" parent="panelAcciones/acciones"]
+[node name="especial" type="Button" parent="panelAcciones/acciones"]
 layout_mode = 2
 size_flags_horizontal = 3
 focus_mode = 0
@@ -262,7 +289,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
-text = "BLOQUEAR"
+text = "ESPECIAL (15MPs)"
 
 [node name="huir" type="Button" parent="panelAcciones/acciones"]
 layout_mode = 2
@@ -327,5 +354,6 @@ stream = ExtResource("5_q4h4s")
 autoplay = true
 
 [connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed"]
-[connection signal="pressed" from="panelAcciones/acciones/bloquear" to="." method="_on_bloquear_pressed"]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed"]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed"]
 [connection signal="pressed" from="panelAcciones/acciones/huir" to="." method="_on_huir_pressed"]
