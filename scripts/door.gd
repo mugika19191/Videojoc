@@ -10,7 +10,7 @@ func _ready():
 func _process(delta):
 	if $Sprite3D2.visible:
 		if Input.is_action_just_pressed("ui_accept"):
-			get_tree().change_scene_to_file("res://mapas/"+ mapa +".tscn")
+			AnimationLevel.change_scene_to_file("res://mapas/salafinal.tscn")
 	
 
 

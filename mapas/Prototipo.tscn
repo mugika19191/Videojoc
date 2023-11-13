@@ -132,14 +132,9 @@ size = Vector3(0.635816, 27.0747, 0.204408)
 [node name="Pause" parent="." instance=ExtResource("2_44ta0")]
 visible = false
 
-[node name="puerta1" parent="." instance=ExtResource("3_r4030")]
-transform = Transform3D(0.69727, 0, 0, 0, 0.58136, 0, 0, 0, 1, 0.820759, 0.257582, 5.69417)
-visible = false
-mapa = "testNivel"
-
 [node name="puerta2" parent="." instance=ExtResource("3_r4030")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.26147, 2.2084, 6.72673)
-mapa = "Prototipo"
+transform = Transform3D(4.24819, 0, 0, 0, 2.7566, 0, 0, 0, 1, -8.87225, 0.481087, -29.165)
+mapa = "salafinal"
 
 [node name="NIVEL2" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.409593, -11.2315)
