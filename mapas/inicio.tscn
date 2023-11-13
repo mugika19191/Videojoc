@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://6nxleou13a2n"]
+[gd_scene load_steps=18 format=3 uid="uid://6nxleou13a2n"]
 
 [ext_resource type="Script" path="res://scripts/inicio.gd" id="1_mmpl5"]
 [ext_resource type="ArrayMesh" uid="uid://babiqnvkw8dj5" path="res://modelos/tower.obj" id="2_nyu46"]
 [ext_resource type="ArrayMesh" uid="uid://0qt5i7hhwcsr" path="res://modelos/puente.obj" id="3_kk5p8"]
-[ext_resource type="Texture2D" uid="uid://bol8b4kn5wijv" path="res://imagenes/Dragon_Quest_Logo.png" id="4_y8rge"]
+[ext_resource type="FontFile" uid="uid://ca8tydt4ec58w" path="res://GermaniaOne-Regular.ttf" id="4_6ruxd"]
+[ext_resource type="Texture2D" uid="uid://co70flhi61axi" path="res://imagenes/Titulo.png" id="4_n5vbk"]
 [ext_resource type="Script" path="res://scripts/cloudSpwn.gd" id="5_m1hvm"]
 [ext_resource type="PackedScene" uid="uid://jnao70n8m2q8" path="res://nodos/nube.tscn" id="6_pdord"]
 [ext_resource type="AudioStream" uid="uid://cxbo26y82p0bb" path="res://Musica/Charla 1 o Intro.mp3" id="7_hd2dh"]
@@ -23,6 +24,9 @@ sky_material = SubResource("ProceduralSkyMaterial_prbks")
 [sub_resource type="Environment" id="Environment_x5tir"]
 background_mode = 2
 sky = SubResource("Sky_yj66m")
+
+[sub_resource type="Theme" id="Theme_7qamf"]
+default_font = ExtResource("4_6ruxd")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c7hnf"]
 transparency = 1
@@ -57,12 +61,16 @@ mesh = ExtResource("3_kk5p8")
 skeleton = NodePath("../..")
 
 [node name="Control" type="Control" parent="."]
+clip_contents = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Pulsa" type="Label" parent="Control"]
 layout_mode = 1
@@ -77,7 +85,12 @@ offset_right = 76.0
 offset_bottom = 178.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "PULSA UN BOTON"
+theme = SubResource("Theme_7qamf")
+theme_override_colors/font_color = Color(0.8125, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "PULSA ENTER"
 
 [node name="TextureRect" type="TextureRect" parent="Control"]
 layout_mode = 1
@@ -86,15 +99,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -579.0
-offset_top = -327.0
-offset_right = 578.0
-offset_bottom = 830.0
+offset_left = -567.0
+offset_top = -637.0
+offset_right = 590.0
+offset_bottom = 520.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_y8rge")
-expand_mode = 4
-stretch_mode = 4
+texture = ExtResource("4_n5vbk")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
 transform = Transform3D(1.25906, -0.002645, 0, 0.00193268, 1.72115, 0.0280512, -6.51265e-05, -0.0579986, 0.832439, 0.569168, 3.12804, -5.49046)
