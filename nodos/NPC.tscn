@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx6e4h1huq6mn"]
+
+[ext_resource type="Script" path="res://scripts/NPC.gd" id="1_xgow7"]
+[ext_resource type="PackedScene" uid="uid://dytjcl0fwj4m8" path="res://nodos/dialogo.tscn" id="2_fwp6o"]
+[ext_resource type="Texture2D" uid="uid://dum3wensrqegx" path="res://imagenes/bocata.png" id="2_ibrdi"]
+[ext_resource type="Texture2D" uid="uid://dkwlv5ysvxbu7" path="res://imagenes/zombieToken.png" id="2_rvyq4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5131e"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_xgow7")
+
+[node name="Dialogo" parent="." instance=ExtResource("2_fwp6o")]
+visible = false
+
+[node name="Sprite3D2" type="Sprite3D" parent="."]
+transform = Transform3D(0.235931, 0, 0, 0, 0.196686, 0, 0, 0, 0.590627, 0.852886, 1.68194, 0)
+visible = false
+texture = ExtResource("2_ibrdi")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+texture = ExtResource("2_rvyq4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
+shape = SubResource("BoxShape3D_5131e")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

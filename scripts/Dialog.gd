@@ -15,14 +15,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	$"../AnimationPlayer".play("cursor")
+	visible=true
 	if !(dialogoIndex < arrayDialogo.size()-1):
 		$back/Icono.visible=false
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_cont"):
 		if dialogoIndex < arrayDialogo.size()-1:
 			dialogoIndex += 1
 			fraseIndex=0
 		else:
 			visible=false
+			$back/Icono.visible=true
+			fraseIndex=0
+			dialogoIndex=0
+			splitDialogo()
+			$back/Name.parse_bbcode(Nombre)
+			get_tree().paused=!get_tree().paused
 	avanzar()
 
 func splitDialogo():
