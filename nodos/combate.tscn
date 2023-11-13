@@ -289,7 +289,7 @@ theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
-text = "ESPECIAL"
+text = "ESPECIAL (15MPs)"
 
 [node name="huir" type="Button" parent="panelAcciones/acciones"]
 layout_mode = 2
