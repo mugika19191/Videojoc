@@ -6,6 +6,10 @@ const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var audio_player : AudioStreamPlayer3D
+
+func _ready():
+	audio_player = $AudioStreamPlayer3D
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -26,6 +30,9 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		$AnimatedSprite3D.frame=1
+	if direction.length() > 0.0 and not audio_player.playing:
+		audio_player.play()
+		
 	move_and_slide()
 func _input(event):
 	input_event.get_name()

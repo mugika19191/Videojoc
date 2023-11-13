@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://5hdqdkxolsdv"]
+[gd_scene load_steps=32 format=3 uid="uid://5hdqdkxolsdv"]
 
 [ext_resource type="Script" path="res://scripts/CharacterBody3D.gd" id="1_yfek5"]
 [ext_resource type="Texture2D" uid="uid://crlt2hxdecd2g" path="res://imagenes/MainChar.png" id="2_vymin"]
+[ext_resource type="AudioStream" uid="uid://b2o4xf2sk8m22" path="res://Musica/running-6358 (mp3cut.net).mp3" id="3_q72jh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6wvjd"]
 atlas = ExtResource("2_vymin")
@@ -248,3 +249,7 @@ transform = Transform3D(0.366455, 0, 0, 0, 0.292263, 0, 0, 0, 0.261032, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_rm66j")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_q72jh")
+autoplay = true
