@@ -24,12 +24,12 @@
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
 sky_horizon_color = Color(0, 0.721569, 0.909804, 1)
 
-[sub_resource type="Sky" id="Sky_hgo0a"]
+[sub_resource type="Sky" id="Sky_r0vvc"]
 sky_material = SubResource("ProceduralSkyMaterial_ryq8w")
 
 [sub_resource type="Environment" id="Environment_o4unv"]
 background_mode = 2
-sky = SubResource("Sky_hgo0a")
+sky = SubResource("Sky_r0vvc")
 ambient_light_sky_contribution = 0.35
 ssao_enabled = true
 ssil_enabled = true
@@ -541,10 +541,10 @@ directional_shadow_mode = 1
 sky_mode = 1
 
 [node name="templearc_top2" parent="." instance=ExtResource("15_2qvkj")]
-transform = Transform3D(0.218154, -0.0144048, -0.00356338, -0.00393276, -0.0115623, -0.229265, 0.0119346, 0.259496, -0.0104131, -0.0233287, 2.53906, -12.2376)
+transform = Transform3D(0.218154, -0.0144048, -0.00356338, -0.00393276, -0.0115623, -0.229265, 0.0119346, 0.259496, -0.0104131, -0.0233287, 2.52547, -12.2376)
 
 [node name="templearc_top3" parent="." instance=ExtResource("15_2qvkj")]
-transform = Transform3D(-0.218486, -0.00145046, -0.00356338, 0.00333357, 0.0118262, -0.229265, 0.00137115, -0.25988, -0.0104131, 0.046441, 2.64212, -14.5306)
+transform = Transform3D(-0.218486, -0.00145046, -0.00356338, 0.00333357, 0.0118262, -0.229265, 0.00137115, -0.25988, -0.0104131, 0.046441, 2.67172, -14.5306)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("16_oo1bu")
