@@ -77,7 +77,7 @@ var armaduras = {
 	"Efecto": {
 	  "Defensa": 3,
 	  "Resistencia": "Hielo",
-	  "Daño de Hielo": 7
+	  "Daño Adicional": 7
 	}
   },
   "309": {
@@ -98,6 +98,11 @@ var armaduras = {
 	  "Destreza": 1,
 	  "Esquive": 10
 	}
+  },
+  "399": {
+	"Nombre": "Vacío",
+	"Descripcion": "Armadura no equipado",
+	"Efecto": {}
   }
 }
 
@@ -149,7 +154,7 @@ var amuletos = {
 	"Descripcion": "Aumenta el daño infligido por armas cuerpo a cuerpo.",
 	"Rareza": "Épico",
 	"Efecto": {
-	  "Daño de Armas Melé": 2
+	  "Daño Normal": 2
 	}
   },
   "207": {
@@ -157,7 +162,7 @@ var amuletos = {
 	"Descripcion": "Aumenta el daño infligido por armas a distancia.",
 	"Rareza": "Épico",
 	"Efecto": {
-	  "Daño de Armas Distancia": 2
+	  "Daño Normal": 2
 	}
   },
   "208": {
@@ -165,7 +170,7 @@ var amuletos = {
 	"Descripcion": "Aumenta el daño infligido de los hechizos lanzados.",
 	"Rareza": "Épico",
 	"Efecto": {
-	  "Daño de Hechizos": 2
+	  "Daño Hechizos": 2
 	}
   },
   "209": {
@@ -208,6 +213,11 @@ var amuletos = {
 	  "Maná": 10
 	}
   },
+  "299": {
+	"Nombre": "Vacío",
+	"Descripcion": "Amuleto no equipado",
+	"Efecto": {}
+  }
 }
 
 
@@ -248,7 +258,7 @@ var armas = {
 	"Tipo": "Melé",
 	"Rareza": "Raro",
 	"Efecto": {
-	  "Daño Adicional": 4,
+	  "Daño Normal": 4,
 	}
   },
   "105": {
@@ -257,7 +267,7 @@ var armas = {
 	"Tipo": "Magico",
 	"Rareza": "Épico",
 	"Efecto": {
-	  "Daño de Hechizos": 3,
+	  "Daño Hechizos": 3,
 	  "Inteligencia": 1
 	}
   },
@@ -267,7 +277,7 @@ var armas = {
 	"Tipo": "Melé",
 	"Rareza": "Legendario",
 	"Efecto": {
-	  "Daño Adicional": 4,
+	  "Daño Normal": 4,
 	  "Aturdir": true
 	}
   },
@@ -278,7 +288,7 @@ var armas = {
 	"Rareza": "Épico",
 	"Efecto": {
 	  "Destreza": 1,
-	  "Daño Adicional": 3
+	  "Daño Normal": 3
 	}
   },
   "108": {
@@ -287,7 +297,7 @@ var armas = {
 	"Tipo": "Distancia",
 	"Rareza": "Raro",
 	"Efecto": {
-	  "Daño Adicional": 4
+	  "Daño Normal": 4
 	}
 	
   },
@@ -330,8 +340,13 @@ var armas = {
 	"Efecto": {
 	  "Fuerza": 1,
 	  "Prob Critico": 5,
-	  "Daño Crítico": 10
+	  "Daño Critico": 10
 	}
+  },
+  "199": {
+	"Nombre": "Vacío",
+	"Descripcion": "Arma no equipada",
+	"Efecto": {}
   }
 }
 

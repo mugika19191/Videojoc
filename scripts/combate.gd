@@ -99,10 +99,13 @@ func _on_golpear_pressed():
 	else:
 		critMult = 1
 	
-	if spc:
+	if spc: #Si ataque especial
 		if State.clase == 1:#Especial del guerrero +daño +defensa
-			dmg = (State.daño+5)*critMult
+			#dmg = (State.daño+5)*critMult
+			State.calcular_dano_especial()
+			dmg = (State.daño)*critMult
 			if critMult == 2:
+				dmg = dmg + State.obtener_danoCrit()
 				printearTexto("Ha sido un golpe crítico ¡Doble de daño!")
 				await Signal(self,"textbox_closed")
 			printearTexto("Arremetes contra el enemigo con tu furia, provocando %d de daño" % dmg)
@@ -112,11 +115,13 @@ func _on_golpear_pressed():
 			setVida($contenedorVillano/ProgressBar, vidaActualEnemigo, enemigo.vida)
 		else:
 			printearTexto("Hm...Parece que esta clase no dispone de habilidad especial")
-	else:
+	else: #Si ataque normal
+		State.calcular_dano_normal()
 		dmg = (State.daño)*critMult
 		if critMult == 2:
-				printearTexto("Ha sido un golpe crítico ¡Doble de daño!")
-				await Signal(self,"textbox_closed")
+			dmg = dmg + State.obtener_danoCrit()
+			printearTexto("Ha sido un golpe crítico ¡Doble de daño!")
+			await Signal(self,"textbox_closed")
 		printearTexto("Golpeaste con %d de daño" % dmg)
 		await Signal(self,"textbox_closed")
 	
