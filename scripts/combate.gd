@@ -9,6 +9,9 @@ var vidaActualEnemigo = 0
 var manaActual = 0
 var bloqueando = false
 var spc = false
+var coste = 20 - State.obtener_itg()*5
+var critMult = 1
+var critProb = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +19,10 @@ func _ready():
 	setVida($panelJugador/datosJugador/ProgressBar, State.vida_actual, State.vida_max)
 	setMana($panelJugador/datosJugador/ProgressBar2, State.mana_actual, State.mana_max)
 	$contenedorVillano/villano.texture = enemigo.sprite
+	#print("EL COMBATE SE EJECUTA AHORA")
+	coste = 20 - State.obtener_itg()*5
+	$panelAcciones/acciones/especial.text = "ESPECIAL (%d MPs)" % coste
+	
 	
 	vidaActualJugador = State.vida_actual
 	vidaActualEnemigo = enemigo.vida
@@ -67,17 +74,37 @@ func turno_enemigo():
 	
 
 func _on_huir_pressed():
-	printearTexto("Escapaste manin")
-	await Signal(self,"textbox_closed")
-	self.visible=false
-	$Camera2D.enabled=false
-	get_tree().paused=!get_tree().paused #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
+	var rng = RandomNumberGenerator.new()
+	var huir = 20 + State.des*20
+	if rng.randi_range(1,100) <= huir:
+		printearTexto("Escapaste manin")
+		await Signal(self,"textbox_closed")
+		self.visible=false	
+		$Camera2D.enabled=false
+		get_tree().paused=!get_tree().paused #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
+	else:
+		printearTexto("En el fulgor del encuentro no encuentras la oportunidad de huir")
+		await Signal(self,"textbox_closed")
+		turno_enemigo()
+		
+	
 
 
 func _on_golpear_pressed():
+	var rng = RandomNumberGenerator.new()
+	var dmg = State.daño
+	
+	if rng.randi_range(1,100) <= critProb:
+		critMult = 2
+	else:
+		critMult = 1
+	
 	if spc:
 		if State.clase == 1:#Especial del guerrero +daño +defensa
-			var dmg = State.daño+5
+			dmg = (State.daño+5)*critMult
+			if critMult == 2:
+				printearTexto("Ha sido un golpe crítico ¡Doble de daño!")
+				await Signal(self,"textbox_closed")
 			printearTexto("Arremetes contra el enemigo con tu furia, provocando %d de daño" % dmg)
 			await Signal(self,"textbox_closed")
 	
@@ -86,10 +113,14 @@ func _on_golpear_pressed():
 		else:
 			printearTexto("Hm...Parece que esta clase no dispone de habilidad especial")
 	else:
-		printearTexto("Golpeaste con %d de daño" % State.daño)
+		dmg = (State.daño)*critMult
+		if critMult == 2:
+				printearTexto("Ha sido un golpe crítico ¡Doble de daño!")
+				await Signal(self,"textbox_closed")
+		printearTexto("Golpeaste con %d de daño" % dmg)
 		await Signal(self,"textbox_closed")
 	
-		vidaActualEnemigo = max(0, vidaActualEnemigo - State.daño)
+		vidaActualEnemigo = max(0, vidaActualEnemigo - dmg)
 		setVida($contenedorVillano/ProgressBar, vidaActualEnemigo, enemigo.vida)
 	
 	$AnimationPlayer.play("enemigoDañado")
@@ -113,8 +144,9 @@ func _on_golpear_pressed():
 
 func _on_especial_pressed():
 	if State.clase == 1:#Guerrero
-		if manaActual>=15:
-			manaActual = manaActual - 15
+		coste = 20 - State.obtener_itg()*5
+		if manaActual>=coste:
+			manaActual = manaActual - coste
 			setMana($panelJugador/datosJugador/ProgressBar2, manaActual, State.mana_max)
 			printearTexto("Utilizas tu movimiento especial de guerrero")
 			await Signal(self,"textbox_closed")

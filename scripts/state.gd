@@ -3,15 +3,20 @@ extends Node
 
 var objetos = preload("objetos.gd").new()
 var clase = 1
+
 var vida_actual = 50
 var vida_max = 50
-var mana_actual = 30
-var mana_max = 30
+
+var mana_actual = 35
+var mana_max = 35
+
 var daño = 0
+
 var des = 0
 var fue = 0
 var itg = 0
 var pod = 0
+
 var velocidad = 10
 var defensa = 2
 var resistencias = []
@@ -26,8 +31,8 @@ var daños = {
 }
 
 var inventario = {
-	"armadura": 304, #Ejemplo: la armadura 304 debería aumentar la vida_act a 62, y añadir la resistencia [Fuego]
-	"amuleto": 203, #Ejemplo: la armadura 203 debería aumentar el poder a 1 
+	"armadura": 305, #Ejemplo: la armadura 304 debería aumentar la vida_act a 62, y añadir la resistencia [Fuego]
+	"amuleto": 203, #Ejemplo: la armadura 203 debería aumentar la pod a 1 
 	"armas": [101, 102]  # Dos ranuras para armas #Ejemplo: Daño 13 y Velocidad 20 
 }
 
@@ -59,7 +64,7 @@ func calcular_dano():
 func calcular_estadisticas():
 	#Reestablecemos las estadsticas a los valores base
 	vida_max = 50
-	mana_max = 30
+	mana_max = 35
 	daño = 10
 	des = 0
 	fue = 0
@@ -96,7 +101,7 @@ func calcular_estadisticas():
 				vida_actual += armadura_equipada["Efecto"].get("Vida", 0)
 				velocidad += armadura_equipada["Efecto"].get("Velocidad", 0)
 				mana_max += armadura_equipada["Efecto"].get("Maná", 0)
-				mana_max += armadura_equipada["Efecto"].get("Maná", 0)
+				mana_actual += armadura_equipada["Efecto"].get("Maná", 0)
 				itg += armadura_equipada["Efecto"].get("Inteligencia", 0)
 				des += armadura_equipada["Efecto"].get("Destreza", 0)
 				fue += armadura_equipada["Efecto"].get("Fuerza", 0)
@@ -107,6 +112,8 @@ func calcular_estadisticas():
 
 	if inventario["amuleto"]:
 		var amuleto_id = str(inventario["amuleto"])
+		print("El amuleto equipado tiene id: ")
+		print(amuleto_id)
 		
 		if objetos.amuletos.has(amuleto_id):
 			var amuleto_equipado = objetos.amuletos[amuleto_id]
@@ -128,6 +135,9 @@ func calcular_estadisticas():
 	for i in range(2):
 		if inventario["armas"][i]:
 			var arma_id = str(inventario["armas"][i])
+			print("La arma ", i+1 ," equipada tiene id: ")
+			print(arma_id)
+			
 			
 			if objetos.armas.has(arma_id):
 				var arma_equipada = objetos.armas[arma_id]
@@ -143,6 +153,8 @@ func calcular_estadisticas():
 					
 					#FAlTAN ARMAS (faltan bastantes "Efectos")
 			
+			
+	print("LAS ESTADISTICAS SE ACTUALIZAN AHORA")
 func obtener_des():
 	return des
 func obtener_itg():

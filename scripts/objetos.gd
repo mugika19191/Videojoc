@@ -86,7 +86,7 @@ var armaduras = {
 	"Rareza": "Legendario",
 	"Efecto": {
 	  "Defensa": 3,
-	  "Regeneracion": 10
+	  "Poder": 1
 	}
   },
   "310": {
