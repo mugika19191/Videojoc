@@ -1,9 +1,10 @@
-[gd_scene load_steps=35 format=3 uid="uid://dxq15tet3suwm"]
+[gd_scene load_steps=36 format=3 uid="uid://dxq15tet3suwm"]
 
+[ext_resource type="Script" path="res://mapas/Encounters.gd" id="1_1tuqx"]
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_44ta0"]
+[ext_resource type="PackedScene" uid="uid://c5i88craack7d" path="res://nodos/combate.tscn" id="2_ruxoa"]
 [ext_resource type="PackedScene" uid="uid://df2opv12nhotr" path="res://nodos/door.tscn" id="3_r4030"]
-[ext_resource type="PackedScene" uid="uid://cw3p6k5olohcm" path="res://nodos/enem.tscn" id="4_ow0ux"]
 [ext_resource type="PackedScene" uid="uid://dabale7tnn5cp" path="res://3dAssests/prepared/tiles_combined_mid_section.tscn" id="6_biqb6"]
 [ext_resource type="PackedScene" uid="uid://b5tvgrv70krpk" path="res://3dAssests/prepared/temple_pillar_full.tscn" id="7_2febl"]
 [ext_resource type="PackedScene" uid="uid://du76k2saa0m6t" path="res://3dAssests/base/temple_pillars/temple_pillar_top_end.tscn" id="7_a73ta"]
@@ -97,11 +98,10 @@ _data = {
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_o4unv")
+script = ExtResource("1_1tuqx")
+combate = ExtResource("2_ruxoa")
 
-[node name="DOÑA PUTA" parent="." instance=ExtResource("4_ow0ux")]
-transform = Transform3D(0.423888, 0, 0, 0, 0.226808, 0, 0, 0, 1, -0.10876, 0.993928, -24.3678)
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_ajtw4")]
+[node name="Player" parent="." instance=ExtResource("1_ajtw4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00383568, 0.219195, -0.105667)
 
 [node name="NIVEL1" type="CSGBox3D" parent="."]
@@ -253,54 +253,6 @@ size = Vector3(1, 5.18257, 9.20201)
 [node name="CSGBox3D7" type="CSGBox3D" parent="INTERLUDIO"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9466, 0, -13.1582)
 size = Vector3(1.00866, 5.18257, 8.03048)
-
-[node name="NIVEL4" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.03997, -0.0662429, -31.2291)
-visible = false
-use_collision = true
-size = Vector3(17.8375, 0.002, 21.9836)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.08153, 0.0186012, 10.9848)
-size = Vector3(1.7436, 4.46919, 0.837104)
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.85608, 0.0186012, 10.9848)
-size = Vector3(1.7436, 4.46919, 0.837104)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71859, 1.02428, 16.7053)
-size = Vector3(0.494285, 2.43601, 11.1959)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.71859, 1.02428, -0.240332)
-size = Vector3(0.494285, 2.43601, 21.7698)
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.05661, 0.0186012, -10.9323)
-size = Vector3(3.29402, 4.43969, 0.462408)
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.113091, 0.0186012, -10.9323)
-size = Vector3(3.29402, 4.43969, 0.462408)
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="NIVEL4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92446, 0.0186012, -10.9323)
-size = Vector3(16.791, 4.43969, 0.462408)
-
-[node name="NIVEL5" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72651, -1.4288, -40.4667)
-visible = false
-use_collision = true
-size = Vector3(25.9254, 2.66218, 66.6618)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="NIVEL5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1144, 1.02428, -10.4893)
-size = Vector3(0.494285, 5.12659, 45.6109)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="NIVEL5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7482, 1.02428, -10.4893)
-size = Vector3(0.494285, 5.12659, 45.6109)
 
 [node name="TemplePillar" parent="." instance=ExtResource("7_2febl")]
 transform = Transform3D(0.202142, 0, 0, 0, 0.0574275, 0, 0, 0, 0.196834, 1.28819, -0.0438497, -3.24521)
@@ -737,6 +689,7 @@ texture = ExtResource("23_yig2p")
 transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
 shape = SubResource("BoxShape3D_5131e")
 
+[connection signal="child_entered_tree" from="WorldEnvironment" to="WorldEnvironment" method="_on_child_entered_tree"]
 [connection signal="visibility_changed" from="NPC2/Dialogo" to="NPC2/Dialogo/Dialog" method="_on_dialogo_visibility_changed" flags=18]
 [connection signal="area_entered" from="NPC2/Area3D" to="NPC2" method="_on_area_3d_area_entered" flags=18]
 [connection signal="area_exited" from="NPC2/Area3D" to="NPC2" method="_on_area_3d_area_exited" flags=18]
