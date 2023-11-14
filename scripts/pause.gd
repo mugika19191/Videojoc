@@ -10,6 +10,7 @@ func _process(delta):
 			get_tree().paused=!get_tree().paused
 			visible=false
 			return
+		loadStats()
 		get_tree().paused = !get_tree().paused
 		visible=true
 		$AnimationPlayer.play("menu_pausa_in")
@@ -26,3 +27,8 @@ func _on_resume_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+func loadStats():
+	$VBoxContainer/Destreza.text="Destreza:  "+str(State.des)
+	$VBoxContainer/Fuerza.text="Fuerza:  "+str(State.fue)
+	$VBoxContainer/Inteligencia.text="Inteligencia:  "+str(State.itg)
+	$VBoxContainer/Poder.text="Poder:  "+str(State.pod)

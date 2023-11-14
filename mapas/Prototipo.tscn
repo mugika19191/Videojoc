@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://dxq15tet3suwm"]
 
-[ext_resource type="Script" path="res://mapas/Encounters.gd" id="1_1tuqx"]
+[ext_resource type="Script" path="res://scripts/Encounters.gd" id="1_1tuqx"]
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
 [ext_resource type="PackedScene" uid="uid://jmhjsyctl5xv" path="res://nodos/pause.tscn" id="2_44ta0"]
 [ext_resource type="PackedScene" uid="uid://c5i88craack7d" path="res://nodos/combate.tscn" id="2_ruxoa"]

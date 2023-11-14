@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dytjcl0fwj4m8"]
 
 [ext_resource type="Texture2D" uid="uid://dk1xrg8ll5o4w" path="res://imagenes/rpgportraits.png" id="1_2h0hh"]
-[ext_resource type="Script" path="res://nodos/SingletonDialog.gd" id="1_kc8v7"]
+[ext_resource type="Script" path="res://scripts/SingletonDialog.gd" id="1_c0br0"]
 [ext_resource type="Texture2D" uid="uid://cln0t4lcts6v3" path="res://imagenes/flecha.png" id="3_dq2in"]
 
 [sub_resource type="Gradient" id="Gradient_52s37"]
@@ -59,7 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_kc8v7")
+script = ExtResource("1_c0br0")
 
 [node name="Dialog" type="Control" parent="."]
 layout_mode = 1
