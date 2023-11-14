@@ -3,7 +3,7 @@ extends Control
 @export var transitionSpeed = 0
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_cancel"):
+	if Input.is_action_just_pressed("ui_cancel")&&!get_tree().paused:
 		if get_tree().paused ==true:
 			$AnimationPlayer.play('menu_pausa_out')
 			await $AnimationPlayer.animation_finished
@@ -18,7 +18,9 @@ func _process(delta):
 
 
 func _on_resume_pressed():
-	get_tree().paused = !get_tree().paused
+	$AnimationPlayer.play('menu_pausa_out')
+	await $AnimationPlayer.animation_finished
+	get_tree().paused=!get_tree().paused
 	visible=false
 
 

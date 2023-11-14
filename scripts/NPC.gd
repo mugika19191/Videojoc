@@ -1,6 +1,8 @@
 extends Node3D
 
-
+@export var Dialogo: String
+@export var DialogBBC: String
+@export var Nombre: String
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -8,12 +10,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	if $Sprite3D2.visible && Input.is_action_just_pressed("ui_accept"):
+		Dialog.LoadData(Dialogo,DialogBBC,Nombre)
+		Dialog.StartDialog()
 		get_tree().paused=!get_tree().paused
-		$Dialogo.visible=true
-		if $Dialogo.visible:
-			print("DIALOG ON")
 
 func _on_area_3d_area_entered(area):
 	# Replace with function body.

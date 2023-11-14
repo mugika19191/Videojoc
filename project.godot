@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 State="*res://scripts/state.gd"
 AnimationLevel="*res://nodos/AnimationLevel.tscn"
+Dialog="*res://nodos/dialogo.tscn"
 
 [input]
 

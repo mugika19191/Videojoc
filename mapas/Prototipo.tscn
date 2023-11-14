@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dxq15tet3suwm"]
+[gd_scene load_steps=25 format=3 uid="uid://dxq15tet3suwm"]
 
 [ext_resource type="Script" path="res://mapas/Encounters.gd" id="1_1tuqx"]
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
@@ -20,12 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cfu10364mn16b" path="res://3dAssests/prepared/temple_pillar_broken.tscn" id="17_uaygm"]
 [ext_resource type="PackedScene" uid="uid://dgei6i1r2qbts" path="res://3dAssests/prepared/temple_pillar_broken_2.tscn" id="18_roeea"]
 [ext_resource type="PackedScene" uid="uid://df44qbjskigqv" path="res://3dAssests/base/debris/temple_debris_1.tscn" id="19_fvdo7"]
-[ext_resource type="Script" path="res://scripts/NPC.gd" id="20_haupn"]
-[ext_resource type="Script" path="res://scripts/Dialog.gd" id="21_f2poa"]
-[ext_resource type="Texture2D" uid="uid://dum3wensrqegx" path="res://imagenes/bocata.png" id="22_aoyl3"]
-[ext_resource type="Texture2D" uid="uid://dk1xrg8ll5o4w" path="res://imagenes/rpgportraits.png" id="22_wv0q3"]
-[ext_resource type="Texture2D" uid="uid://cln0t4lcts6v3" path="res://imagenes/flecha.png" id="23_ofds7"]
-[ext_resource type="Texture2D" uid="uid://dkwlv5ysvxbu7" path="res://imagenes/zombieToken.png" id="23_yig2p"]
+[ext_resource type="PackedScene" uid="uid://bx6e4h1huq6mn" path="res://nodos/NPC.tscn" id="21_feryn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -45,54 +40,6 @@ sdfgi_bounce_feedback = 0.34
 sdfgi_energy = 2.0
 glow_normalized = true
 glow_blend_mode = 1
-
-[sub_resource type="Gradient" id="Gradient_52s37"]
-offsets = PackedFloat32Array(0, 0.148387)
-colors = PackedColorArray(0, 0, 0, 0.392157, 1, 1, 1, 0.392157)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_q6mfc"]
-gradient = SubResource("Gradient_52s37")
-fill_from = Vector2(1, 0)
-
-[sub_resource type="Animation" id="Animation_6s7tp"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Dialog/back/Icono:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(895, 180)]
-}
-
-[sub_resource type="Animation" id="Animation_v3j4v"]
-resource_name = "cursor"
-length = 0.6
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Dialog/back/Icono:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(895, 180), Vector2(895, 176), Vector2(895, 180)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g74ef"]
-_data = {
-"RESET": SubResource("Animation_6s7tp"),
-"cursor": SubResource("Animation_v3j4v")
-}
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_5131e"]
 
 [node name="Prototype" type="Node3D"]
 
@@ -590,106 +537,16 @@ visible = false
 use_collision = true
 size = Vector3(11.5255, 5.04195, 0.462408)
 
-[node name="NPC2" type="Node3D" parent="."]
-transform = Transform3D(0.150814, 0, 0, 0, 0.119578, 0, 0, 0, 1, -0.0723544, 0.154713, -10.9249)
-script = ExtResource("20_haupn")
+[node name="NPC1" parent="." instance=ExtResource("21_feryn")]
+transform = Transform3D(0.257222, 0, 0, 0, 0.180578, 0, 0, 0, 0.48188, 1.23406, 0.278916, -0.715148)
+Dialogo = "Viva BRADIO &&Viva JACHI"
+DialogBBC = "Viva [wave]BRADIO[/wave] &&Viva [wave]JACHI"
+Nombre = "[b]NPC1[/b]"
 
-[node name="Dialogo" type="Control" parent="NPC2"]
-process_mode = 2
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Dialog" type="Control" parent="NPC2/Dialogo"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("21_f2poa")
-Dialogo = "Viva BRADIO &&Viva JACHI  &&Y Viva XBOX "
-DialogoBBC = "Viva [wave]BRADIO[/wave] &&Viva [wave]JACHI[/wave] &&Y Viva [wave]XBOX[/wave] "
-Nombre = "[b]Sasel[/b]"
-
-[node name="back" type="TextureRect" parent="NPC2/Dialogo/Dialog"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 116.0
-offset_top = -265.0
-offset_right = -117.0
-offset_bottom = -57.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = SubResource("GradientTexture2D_q6mfc")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPC2/Dialogo/Dialog/back"]
-texture_filter = 1
-position = Vector2(125, 105)
-scale = Vector2(4.69375, 4.31678)
-texture = ExtResource("22_wv0q3")
-region_enabled = true
-region_rect = Rect2(0, 0, 40, 38)
-
-[node name="TextBox" type="RichTextLabel" parent="NPC2/Dialogo/Dialog/back"]
-layout_mode = 0
-offset_left = 236.0
-offset_top = 62.0
-offset_right = 873.0
-offset_bottom = 188.0
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 0
-theme_override_font_sizes/italics_font_size = 0
-theme_override_font_sizes/bold_italics_font_size = 0
-theme_override_font_sizes/mono_font_size = 0
-bbcode_enabled = true
-
-[node name="Name" type="RichTextLabel" parent="NPC2/Dialogo/Dialog/back"]
-layout_mode = 0
-offset_left = 236.0
-offset_top = 21.0
-offset_right = 864.0
-offset_bottom = 83.0
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/bold_font_size = 30
-bbcode_enabled = true
-
-[node name="Icono" type="Sprite2D" parent="NPC2/Dialogo/Dialog/back"]
-texture_filter = 1
-position = Vector2(895, 180)
-scale = Vector2(1.025, 1.02184)
-texture = ExtResource("23_ofds7")
-region_enabled = true
-region_rect = Rect2(0, 0, 40, 38)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="NPC2/Dialogo"]
-libraries = {
-"": SubResource("AnimationLibrary_g74ef")
-}
-
-[node name="Sprite3D2" type="Sprite3D" parent="NPC2"]
-transform = Transform3D(0.235931, 0, 0, 0, 0.196686, 0, 0, 0, 0.590627, 0.852886, 1.68194, 0)
-visible = false
-texture = ExtResource("22_aoyl3")
-
-[node name="Area3D" type="Area3D" parent="NPC2"]
-
-[node name="Sprite3D" type="Sprite3D" parent="NPC2/Area3D"]
-texture = ExtResource("23_yig2p")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC2/Area3D"]
-transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
-shape = SubResource("BoxShape3D_5131e")
+[node name="NPC2" parent="." instance=ExtResource("21_feryn")]
+transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, 0.301362, 0.321336, -0.525439)
+Dialogo = "Viva BRADIO &&Viva JACHI &&Y Viva XBOX"
+DialogBBC = "Viva [wave]BRADIO[/wave] &&Viva [wave]JACHI[/wave] &&Y Viva [wave]XBOX[/wave]"
+Nombre = "[b]NPC2[/b]"
 
 [connection signal="child_entered_tree" from="WorldEnvironment" to="WorldEnvironment" method="_on_child_entered_tree"]
-[connection signal="visibility_changed" from="NPC2/Dialogo" to="NPC2/Dialogo/Dialog" method="_on_dialogo_visibility_changed" flags=18]
-[connection signal="area_entered" from="NPC2/Area3D" to="NPC2" method="_on_area_3d_area_entered" flags=18]
-[connection signal="area_exited" from="NPC2/Area3D" to="NPC2" method="_on_area_3d_area_exited" flags=18]
