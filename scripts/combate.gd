@@ -71,6 +71,17 @@ func turno_enemigo():
 	if spc == true:#si hemos usado el especial, lo desactivamos al final del turno
 		$panelAcciones/acciones/especial.visible = true
 		spc = false
+	if vidaActualJugador <=0:
+		printearTexto("Oh, el dulce sabor de la muerte...")
+		await Signal(self,"textbox_closed")
+		printearTexto("Antaño hace que no te sentías tan en paz con el mundo, y ahora desde tus ojos del alma observas como tu cuerpo se marchita
+		bajo tus pies. La delicadeza de la mortalidad ya no te persigue en esta nueva forma, pues deambulas en el mundo como un mota de polvo que 
+		fue una vez parte de una estrella lejana. Descansa ahora, criatura, pues mañana despertarás de nuevo en esta mazmorra,
+		y tu sufrimiendo volverá a dar comienzo.")
+		await Signal(self,"textbox_closed")
+		printearTexto("HAS MUERTO")
+		await Signal(self,"textbox_closed")
+		get_tree().quit()
 	
 
 func _on_huir_pressed():
