@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://jmhjsyctl5xv"]
 
 [ext_resource type="Script" path="res://scripts/pause.gd" id="1_0q52o"]
-[ext_resource type="Texture2D" uid="uid://8oy1a4l2sddj" path="res://imagenes/backgroundMenu.png" id="2_nawq6"]
+[ext_resource type="Texture2D" uid="uid://bsgtbasawavsm" path="res://imagenes/back.png" id="2_y5nnr"]
 [ext_resource type="FontFile" uid="uid://ca8tydt4ec58w" path="res://GermaniaOne-Regular.ttf" id="3_4anae"]
 
 [sub_resource type="Animation" id="Animation_by8ns"]
@@ -114,7 +114,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_nawq6")
+texture = ExtResource("2_y5nnr")
 expand_mode = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
