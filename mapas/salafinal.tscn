@@ -13,12 +13,12 @@
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
 sky_horizon_color = Color(0, 0.721569, 0.909804, 1)
 
-[sub_resource type="Sky" id="Sky_hgo0a"]
+[sub_resource type="Sky" id="Sky_fjj2r"]
 sky_material = SubResource("ProceduralSkyMaterial_n06cx")
 
 [sub_resource type="Environment" id="Environment_hck34"]
 background_mode = 2
-sky = SubResource("Sky_hgo0a")
+sky = SubResource("Sky_fjj2r")
 ambient_light_sky_contribution = 0.35
 ssao_enabled = true
 ssil_enabled = true

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcx5y3c12sp32"]
+
+[ext_resource type="Texture2D" uid="uid://clv0vhdwgcrp5" path="res://3dAssests/SHOP_Label/shop290x248.png" id="1_ws4w4"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+texture = ExtResource("1_ws4w4")
