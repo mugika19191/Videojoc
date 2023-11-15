@@ -4,6 +4,7 @@ extends Node
 var objetos = preload("objetos.gd").new()
 var clase = 1
 
+var dinero = 0
 var vida_actual = 50
 var vida_max = 50
 
@@ -206,3 +207,7 @@ func obtener_vidaMax():
 	return vida_max
 func obtener_danoCrit():
 	return daños.get("Critico")
+
+func nombreArmadura(id):
+	return objetos.armaduras[str(id)]["Nombre"]
+	

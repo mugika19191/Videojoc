@@ -196,5 +196,19 @@ theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Poder:"
 
+[node name="Dinero" type="Label" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4anae")
+theme_override_font_sizes/font_size = 30
+text = "Dinero:"
+
+[node name="Inventario" type="Label" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_4anae")
+theme_override_font_sizes/font_size = 30
+text = "Inventario:"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

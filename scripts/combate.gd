@@ -143,6 +143,10 @@ func _on_golpear_pressed():
 	await Signal($AnimationPlayer, "animation_finished")
 	
 	if vidaActualEnemigo == 0:
+		State.vida_actual = vidaActualJugador
+		State.mana_actual = manaActual
+		State.dinero = State.dinero + enemigo.dinero
+		print(State.dinero)
 		printearTexto("Derrotaste al enemigo, ¡ENHORABUENA!")
 		await Signal(self,"textbox_closed")
 		self.visible=false
