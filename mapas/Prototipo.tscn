@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dxq15tet3suwm"]
+[gd_scene load_steps=26 format=3 uid="uid://dxq15tet3suwm"]
 
 [ext_resource type="Script" path="res://scripts/Encounters.gd" id="1_1tuqx"]
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dgei6i1r2qbts" path="res://3dAssests/prepared/temple_pillar_broken_2.tscn" id="18_roeea"]
 [ext_resource type="PackedScene" uid="uid://df44qbjskigqv" path="res://3dAssests/base/debris/temple_debris_1.tscn" id="19_fvdo7"]
 [ext_resource type="PackedScene" uid="uid://bx6e4h1huq6mn" path="res://nodos/NPC.tscn" id="21_feryn"]
+[ext_resource type="Script" path="res://scripts/Tendero.gd" id="22_fllvu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -548,5 +549,10 @@ transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, 0.301362, 0.321
 Dialogo = "Viva BRADIO &&Viva JACHI &&Y Viva XBOX"
 DialogBBC = "Viva [wave]BRADIO[/wave] &&Viva [wave]JACHI[/wave] &&Y Viva [wave]XBOX[/wave]"
 Nombre = "[b]NPC2[/b]"
+
+[node name="Tienda" parent="." instance=ExtResource("21_feryn")]
+transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, -0.141547, 0.321336, -11.0097)
+script = ExtResource("22_fllvu")
+combate = ExtResource("2_ruxoa")
 
 [connection signal="child_entered_tree" from="WorldEnvironment" to="WorldEnvironment" method="_on_child_entered_tree"]

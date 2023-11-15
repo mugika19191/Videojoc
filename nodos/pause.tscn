@@ -171,6 +171,7 @@ text = "ESTADISTICAS"
 [node name="Destreza" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.796078, 0, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Destreza:"
@@ -178,6 +179,7 @@ text = "Destreza:"
 [node name="Fuerza" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Fuerza:"
@@ -185,6 +187,7 @@ text = "Fuerza:"
 [node name="Inteligencia" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.286275, 0.501961, 1, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Inteligencia:"
@@ -192,6 +195,7 @@ text = "Inteligencia:"
 [node name="Poder" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.65098, 0.290196, 0.631373, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Poder:"
@@ -199,6 +203,7 @@ text = "Poder:"
 [node name="Dinero" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.788235, 0.780392, 0.121569, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Dinero:"
@@ -206,6 +211,7 @@ text = "Dinero:"
 [node name="Inventario" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
+theme_override_colors/font_color = Color(0.227451, 0.227451, 0.227451, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Inventario:"

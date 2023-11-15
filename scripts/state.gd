@@ -210,4 +210,8 @@ func obtener_danoCrit():
 
 func nombreArmadura(id):
 	return objetos.armaduras[str(id)]["Nombre"]
+func nombreAmuleto(id):
+	return objetos.amuletos[str(id)]["Nombre"]
+func nombreArma(id):
+	return objetos.armas[str(id)]["Nombre"]
 	
