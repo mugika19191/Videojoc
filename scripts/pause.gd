@@ -33,4 +33,4 @@ func loadStats():
 	$VBoxContainer/Inteligencia.text="Inteligencia:  "+str(State.itg)
 	$VBoxContainer/Poder.text="Poder:  "+str(State.pod)
 	$VBoxContainer/Dinero.text="Dinero:  "+str(State.dinero)
-	$VBoxContainer/Inventario.text ="Armadura:" + str(State.nombreArmadura(State.inventario["armadura"]))
+	$VBoxContainer/Inventario.text ="Armadura:\n" + str(State.nombreArmadura(State.inventario["armadura"])) + "\n" + "Amuleto:\n" + str(State.nombreAmuleto(State.inventario["amuleto"])) + "\n" + "Arma 1:\n" + str(State.nombreArma(State.inventario["armas"][0])) + "\n" + "Arma 2:\n" + str(State.nombreArma(State.inventario["armas"][1]))
