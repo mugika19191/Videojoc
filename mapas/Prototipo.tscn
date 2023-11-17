@@ -539,19 +539,19 @@ use_collision = true
 size = Vector3(11.5255, 5.04195, 0.462408)
 
 [node name="NPC1" parent="." instance=ExtResource("21_feryn")]
-transform = Transform3D(0.257222, 0, 0, 0, 0.180578, 0, 0, 0, 0.48188, 1.23406, 0.278916, -0.715148)
+transform = Transform3D(0.257222, 0, 0, 0, 0.180578, 0, 0, 0, 0.48188, 1.588, 0.278916, -2.71116)
 Dialogo = "Viva BRADIO &&Viva JACHI"
 DialogBBC = "Viva [wave]BRADIO[/wave] &&Viva [wave]JACHI"
 Nombre = "[b]NPC1[/b]"
 
 [node name="NPC2" parent="." instance=ExtResource("21_feryn")]
-transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, 0.301362, 0.321336, -0.525439)
+transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, -1.98274, 0.321336, -2.29587)
 Dialogo = "Viva BRADIO &&Viva JACHI &&Y Viva XBOX"
 DialogBBC = "Viva [wave]BRADIO[/wave] &&Viva [wave]JACHI[/wave] &&Y Viva [wave]XBOX[/wave]"
 Nombre = "[b]NPC2[/b]"
 
 [node name="Tienda" parent="." instance=ExtResource("21_feryn")]
-transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, -0.141547, 0.321336, -11.0097)
+transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, -0.271337, 0.308444, -2.19271)
 script = ExtResource("22_fllvu")
 combate = ExtResource("2_ruxoa")
 

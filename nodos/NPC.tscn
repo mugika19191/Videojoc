@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx6e4h1huq6mn"]
+[gd_scene load_steps=7 format=3 uid="uid://bx6e4h1huq6mn"]
 
 [ext_resource type="Script" path="res://scripts/NPC.gd" id="1_xgow7"]
 [ext_resource type="Texture2D" uid="uid://dum3wensrqegx" path="res://imagenes/bocata.png" id="2_ibrdi"]
 [ext_resource type="Texture2D" uid="uid://dkwlv5ysvxbu7" path="res://imagenes/zombieToken.png" id="2_rvyq4"]
+[ext_resource type="Texture2D" uid="uid://c3s7lqxwkbg1i" path="res://imagenes/tendero.png" id="3_4pobd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_duaxu"]
+albedo_texture = ExtResource("3_4pobd")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5131e"]
 
@@ -18,6 +22,7 @@ texture = ExtResource("2_ibrdi")
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="Sprite3D" type="Sprite3D" parent="Area3D"]
+material_override = SubResource("StandardMaterial3D_duaxu")
 texture = ExtResource("2_rvyq4")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]

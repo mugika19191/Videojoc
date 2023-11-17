@@ -31,12 +31,12 @@ var daños = {
 }
 
 var inventario = {
-	#"armadura": 399, #399 --> "No tener armadura"
-	#"amuleto": 299, #299 --> "No tener amuleto"
-	#"armas": [199, 199] #199 --> "No tener armas"
-	"armadura": 308, #Ejemplo: la armadura 304 debería aumentar la vida_act a 62, y añadir la resistencia [Fuego]
-	"amuleto": 208, #Ejemplo: la armadura 203 debería aumentar la pod a 1 
-	"armas": [112, 104]  # Dos ranuras para armas #Ejemplo: Daño 13 y Velocidad 20 
+	"armadura": 399, #399 --> "No tener armadura"
+	"amuleto": 299, #299 --> "No tener amuleto"
+	"armas": [199, 199] #199 --> "No tener armas"
+	#"armadura": 308, #Ejemplo: la armadura 304 debería aumentar la vida_act a 62, y añadir la resistencia [Fuego]
+	#"amuleto": 208, #Ejemplo: la armadura 203 debería aumentar la pod a 1 
+	#"armas": [112, 104]  # Dos ranuras para armas #Ejemplo: Daño 13 y Velocidad 20 
 }
 
 func _ready():

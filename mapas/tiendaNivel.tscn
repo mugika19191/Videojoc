@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bhv7ns00l0cs"]
+[gd_scene load_steps=13 format=3 uid="uid://bhv7ns00l0cs"]
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_05w7v"]
 [ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://3dAssests/base/rocks/rock_big.tscn" id="2_l2nej"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dvutajdsd780m" path="res://3dAssests/base/temple_pillars/temple_door.tscn" id="4_72rv7"]
 [ext_resource type="PackedScene" uid="uid://c8ngey6uofnr7" path="res://3dAssests/prepared/temple_arc.tscn" id="5_4pbf6"]
 [ext_resource type="PackedScene" uid="uid://dcx5y3c12sp32" path="res://nodos/cartel.tscn" id="6_xg8pj"]
+[ext_resource type="PackedScene" uid="uid://bx6e4h1huq6mn" path="res://nodos/NPC.tscn" id="7_qcx4v"]
+[ext_resource type="Script" path="res://scripts/tenderoTienda.gd" id="8_xyqnu"]
+[ext_resource type="PackedScene" uid="uid://2yorwfd6e22a" path="res://nodos/tiendaUI.tscn" id="9_7pxjk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_tgt3k"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -109,3 +112,8 @@ transform = Transform3D(1, 0, 0, 0, 0.999972, 0.00750485, 0, -0.00750485, 0.9999
 [node name="rock_big5" parent="." instance=ExtResource("2_l2nej")]
 transform = Transform3D(-0.000755707, 0.47047, 0.00773401, -0.0183989, -0.0193237, 0.188298, 0.428975, 1.13266e-10, 0.00808976, 0.579397, -1.03059, -9.49943)
 visible = false
+
+[node name="Tienda" parent="." instance=ExtResource("7_qcx4v")]
+transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, 0.530554, 0.323254, -8.44762)
+script = ExtResource("8_xyqnu")
+tiendaUI = ExtResource("9_7pxjk")

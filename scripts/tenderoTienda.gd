@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var combate : PackedScene
+@export var tiendaUI : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -9,7 +9,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $Sprite3D2.visible && Input.is_action_just_pressed("ui_accept"):
-		AnimationLevel.change_scene_to_file("res://mapas/tiendaNivel.tscn")
+		get_tree().paused=!get_tree().paused
+		var tiendaI := tiendaUI.instantiate()
+		add_child(tiendaI)	
 
 func _on_area_3d_area_entered(area):
 	# Replace with function body.
