@@ -15,7 +15,7 @@ func _ready():
 func _process(delta):
 	if $"../Player".velocity.x !=0 || $"../Player".velocity.z !=0:
 		rng.randomize()
-		com=rng.randi_range(0,200)
+		com=rng.randi_range(0,1000)
 		if (com<2):
 			get_tree().paused=!get_tree().paused
 			var comateI := combate.instantiate()
