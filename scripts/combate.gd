@@ -15,6 +15,7 @@ var critProb = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	randomEnem()
 	setVida($contenedorVillano/ProgressBar, enemigo.vida, enemigo.vida)
 	setVida($panelJugador/datosJugador/ProgressBar, State.vida_actual, State.vida_max)
 	setMana($panelJugador/datosJugador/ProgressBar2, State.mana_actual, State.mana_max)
@@ -177,4 +178,10 @@ func _on_especial_pressed():
 		else:
 			printearTexto("No tienes los MP suficientes para hacer eso")
 	await Signal(self,"textbox_closed")
+	
+func randomEnem():
+	var rng = RandomNumberGenerator.new()
+	var com=0
+	com=rng.randi_range(0,3)
+	enemigo=load("res://enemigos/"+str(com)+".tres")
 	

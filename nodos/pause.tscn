@@ -131,15 +131,21 @@ alignment = 1
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "PAUSED"
+theme_override_fonts/font = ExtResource("3_4anae")
+theme_override_font_sizes/font_size = 40
+text = "Menú"
 
 [node name="Resume" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "RESUME GAME"
+theme_override_fonts/font = ExtResource("3_4anae")
+theme_override_font_sizes/font_size = 30
+text = "Continuar"
 
 [node name="Quit" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "QUIT"
+theme_override_fonts/font = ExtResource("3_4anae")
+theme_override_font_sizes/font_size = 30
+text = "Cerrar juego"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

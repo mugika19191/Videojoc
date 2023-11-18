@@ -24,8 +24,8 @@
 [ext_resource type="Script" path="res://scripts/NPC.gd" id="21_wb5rd"]
 [ext_resource type="Script" path="res://scripts/Tendero.gd" id="22_fllvu"]
 [ext_resource type="Texture2D" uid="uid://dum3wensrqegx" path="res://imagenes/bocata.png" id="22_kct1u"]
-[ext_resource type="Texture2D" uid="uid://b0pwexesk5y5g" path="res://imagenes/Tribal Elves Dagger.png" id="23_y1ojj"]
-[ext_resource type="Texture2D" uid="uid://ohhyibxbrrks" path="res://imagenes/Megapack III Dragonslayer Dwarf.png" id="24_d77wh"]
+[ext_resource type="Texture2D" uid="uid://b0pwexesk5y5g" path="res://imagenes/enemigos/Tribal Elves Dagger.png" id="23_dekdt"]
+[ext_resource type="Texture2D" uid="uid://ohhyibxbrrks" path="res://imagenes/enemigos/Megapack III Dragonslayer Dwarf.png" id="24_to0lh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -550,7 +550,7 @@ transform = Transform3D(0.269828, 0, -0.0985196, 0, 0.222881, 0, 0.0572749, 0, 0
 script = ExtResource("21_wb5rd")
 Dialogo = "Saludos, viajero. Estoy en un peregrinaje en este desierto enbusca de respuestas sobre mi propio ser interior. &&La soledad aquí me haproporcionado una gran reflexión."
 DialogBBC = "Saludos, viajero. Estoy en un peregrinaje en este desierto enbusca de respuestas sobre mi propio ser interior. &&La soledad aquí me haproporcionado una gran reflexión."
-Nombre = "[b]Minotauro estoico[/b]"
+Nombre = "[b]Elfa[/b]"
 
 [node name="Sprite3D2" type="Sprite3D" parent="NPC1"]
 transform = Transform3D(0.235931, 0, 0, 0, 0.196686, 0, 0, 0, 0.590627, 0.852886, 1.68194, 0)
@@ -560,7 +560,7 @@ texture = ExtResource("22_kct1u")
 [node name="Area3D" type="Area3D" parent="NPC1"]
 
 [node name="Sprite3D" type="Sprite3D" parent="NPC1/Area3D"]
-texture = ExtResource("23_y1ojj")
+texture = ExtResource("23_dekdt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPC1/Area3D"]
 transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
@@ -572,7 +572,7 @@ transform = Transform3D(0.216618, 0, 0.0774673, 0, 0.161141, 0, -0.0168314, 0, 0
 script = ExtResource("21_wb5rd")
 Dialogo = "¡Oh, viajero! ¿Puedes echarme una mano?  &&Me he perdido en estelaberinto y necesito salir de aquí ¡pero no sé como!"
 DialogBBC = "¡Oh, viajero! ¿Puedes echarme una mano?  &&Me he perdido en estelaberinto y necesito salir de aquí ¡pero no sé como!"
-Nombre = "[b]El Fetido[/b]"
+Nombre = "[b]Enano[/b]"
 
 [node name="Sprite3D2" type="Sprite3D" parent="NPC2"]
 transform = Transform3D(0.235931, 0, 0, 0, 0.196686, 0, 0, 0, 0.590627, 0.852886, 1.68194, 0)
@@ -583,7 +583,7 @@ texture = ExtResource("22_kct1u")
 
 [node name="Sprite3D" type="Sprite3D" parent="NPC2/Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -7.45058e-09, 0, 1, 0, 0, 0)
-texture = ExtResource("24_d77wh")
+texture = ExtResource("24_to0lh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NPC2/Area3D"]
 transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)

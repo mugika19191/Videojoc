@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://fcjpud3fomag"]
+
+[ext_resource type="Script" path="res://scripts/enemigoBase.gd" id="1_ipbo4"]
+[ext_resource type="Texture2D" uid="uid://3l73rcnajcew" path="res://imagenes/enemigos/Boss Earth Dragon.png" id="2_o2ekh"]
+
+[resource]
+script = ExtResource("1_ipbo4")
+nombre = "Enemy"
+sprite = ExtResource("2_o2ekh")
+vida = 100
+"daño" = 15
+dinero = 30

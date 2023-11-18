@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://0jf7uphe8sys"]
+
+[ext_resource type="Script" path="res://scripts/enemigoBase.gd" id="1_j5mdp"]
+[ext_resource type="Texture2D" uid="uid://dbbk4mme4mq8f" path="res://imagenes/enemigos/Boss Ice Titan Demeres.png" id="2_q2w3g"]
+
+[resource]
+script = ExtResource("1_j5mdp")
+nombre = "Enemy"
+sprite = ExtResource("2_q2w3g")
+vida = 40
+"daño" = 7
+dinero = 10

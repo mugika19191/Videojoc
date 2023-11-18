@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0pwexesk5y5g"
-path.s3tc="res://.godot/imported/Tribal Elves Dagger.png-2d3b98e69a68b7ae54ef709bd20430e7.s3tc.ctex"
+uid="uid://dbbk4mme4mq8f"
+path.s3tc="res://.godot/imported/Boss Ice Titan Demeres.png-d7e1f75ea03b6c839d8707ac55e37b8e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://imagenes/Tribal Elves Dagger.png"
-dest_files=["res://.godot/imported/Tribal Elves Dagger.png-2d3b98e69a68b7ae54ef709bd20430e7.s3tc.ctex"]
+source_file="res://imagenes/enemigos/Boss Ice Titan Demeres.png"
+dest_files=["res://.godot/imported/Boss Ice Titan Demeres.png-d7e1f75ea03b6c839d8707ac55e37b8e.s3tc.ctex"]
 
 [params]
 

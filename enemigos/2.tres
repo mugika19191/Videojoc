@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cm5aewhfksiij"]
+
+[ext_resource type="Script" path="res://scripts/enemigoBase.gd" id="1_iih67"]
+[ext_resource type="Texture2D" uid="uid://cflfnfesx1t1f" path="res://imagenes/enemigos/Boss Abomination Aqua.png" id="2_7jrsc"]
+
+[resource]
+script = ExtResource("1_iih67")
+nombre = "Enemy"
+sprite = ExtResource("2_7jrsc")
+vida = 45
+"daño" = 6
+dinero = 10

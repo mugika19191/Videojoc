@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4j07oadu6wxd"
-path="res://.godot/imported/Gazers Skull.png-97ff274af6a4d80c6e519316028150ef.ctex"
+uid="uid://caj1abcnibuve"
+path="res://.godot/imported/Boss Parrot King.png-ebefa369683c69a69b9b081fabb2b3a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/Gazers Skull.png"
-dest_files=["res://.godot/imported/Gazers Skull.png-97ff274af6a4d80c6e519316028150ef.ctex"]
+source_file="res://imagenes/enemigos/Boss Parrot King.png"
+dest_files=["res://.godot/imported/Boss Parrot King.png-ebefa369683c69a69b9b081fabb2b3a6.ctex"]
 
 [params]
 

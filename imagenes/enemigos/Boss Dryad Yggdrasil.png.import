@@ -2,27 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkwlv5ysvxbu7"
-path.s3tc="res://.godot/imported/zombieToken.png-92728b9175877551bf1a38d1a3dcdd03.s3tc.ctex"
+uid="uid://coy83gyhlattu"
+path="res://.godot/imported/Boss Dryad Yggdrasil.png-1b1b591d5bf2500b35e5c1e7f1a6f747.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://imagenes/zombieToken.png"
-dest_files=["res://.godot/imported/zombieToken.png-92728b9175877551bf1a38d1a3dcdd03.s3tc.ctex"]
+source_file="res://imagenes/enemigos/Boss Dryad Yggdrasil.png"
+dest_files=["res://.godot/imported/Boss Dryad Yggdrasil.png-1b1b591d5bf2500b35e5c1e7f1a6f747.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -32,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

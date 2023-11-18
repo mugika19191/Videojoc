@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/combate.gd" id="1_3ew02"]
 [ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
-[ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://skeleto.tres" id="2_y1nro"]
-[ext_resource type="Texture2D" uid="uid://b4j07oadu6wxd" path="res://imagenes/Gazers Skull.png" id="4_81y5o"]
+[ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://enemigos/1.tres" id="2_d2m7a"]
+[ext_resource type="Texture2D" uid="uid://cflfnfesx1t1f" path="res://imagenes/enemigos/Boss Abomination Aqua.png" id="4_bxytl"]
 [ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_q4h4s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mducp"]
@@ -111,7 +111,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3ew02")
-enemigo = ExtResource("2_y1nro")
+enemigo = ExtResource("2_d2m7a")
 
 [node name="fondo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -163,7 +163,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-texture = ExtResource("4_81y5o")
+texture = ExtResource("4_bxytl")
 stretch_mode = 2
 
 [node name="panelJugador" type="Panel" parent="."]
@@ -353,7 +353,7 @@ anchor_mode = 0
 stream = ExtResource("5_q4h4s")
 autoplay = true
 
-[connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed"]
-[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed"]
-[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed"]
-[connection signal="pressed" from="panelAcciones/acciones/huir" to="." method="_on_huir_pressed"]
+[connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed" flags=18]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed" flags=18]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed" flags=18]
+[connection signal="pressed" from="panelAcciones/acciones/huir" to="." method="_on_huir_pressed" flags=18]
