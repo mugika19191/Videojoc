@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://2yorwfd6e22a"]
 
 [ext_resource type="Script" path="res://scripts/tiendaUI.gd" id="1_ddi48"]
+[ext_resource type="AudioStream" uid="uid://bamy36i6gbqmy" path="res://Musica/tomp3.cc - 8bit RPG Music  Shop Theme.mp3" id="2_m2o6r"]
 [ext_resource type="Texture2D" uid="uid://365133lfbs1q" path="res://imagenes/TiendaFondo.webp" id="3_nvvqx"]
 [ext_resource type="Texture2D" uid="uid://c3s7lqxwkbg1i" path="res://imagenes/tendero.png" id="4_r78bd"]
-[ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_1qvw3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0yq0"]
 bg_color = Color(0, 0, 0, 0.72549)
@@ -102,7 +102,7 @@ grow_vertical = 2
 script = ExtResource("1_ddi48")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_1qvw3")
+stream = ExtResource("2_m2o6r")
 autoplay = true
 
 [node name="fondo" type="TextureRect" parent="."]
@@ -292,11 +292,11 @@ anchor_mode = 0
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_objeto_1_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_especial_pressed"]
-[connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_objeto_2_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_bloquear_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_objeto_2_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_objeto_3_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_especial_pressed"]
-[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_objeto_4_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_bloquear_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_objeto_4_pressed"]
 [connection signal="pressed" from="panelAcciones/Button" to="." method="_on_button_pressed"]
