@@ -152,6 +152,7 @@ func _on_golpear_pressed():
 		self.visible=false
 		get_tree().paused=!get_tree().paused
 		$Camera2D.enabled=false
+		$AudioStreamPlayer2D.stop()
 	turno_enemigo()
 
 

@@ -10,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $Sprite3D2.visible && Input.is_action_just_pressed("ui_accept"):
+	if $Sprite3D2.visible && Input.is_action_just_pressed("ui_accept") && !get_tree().paused:
 		Dialog.LoadData(Dialogo,DialogBBC,Nombre)
 		Dialog.StartDialog()
 		get_tree().paused=!get_tree().paused

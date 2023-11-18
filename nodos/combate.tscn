@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/combate.gd" id="1_3ew02"]
 [ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
-[ext_resource type="Texture2D" uid="uid://bbnr74ve5pqu1" path="res://imagenes/skeletillo.png" id="2_6bp54"]
 [ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://skeleto.tres" id="2_y1nro"]
+[ext_resource type="Texture2D" uid="uid://b4j07oadu6wxd" path="res://imagenes/Gazers Skull.png" id="4_81y5o"]
 [ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_q4h4s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mducp"]
@@ -131,9 +131,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -140.0
-offset_top = -155.5
-offset_right = 140.0
-offset_bottom = 155.5
+offset_top = -155.0
+offset_right = 239.0
+offset_bottom = 222.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -163,7 +163,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-texture = ExtResource("2_6bp54")
+texture = ExtResource("4_81y5o")
 stretch_mode = 2
 
 [node name="panelJugador" type="Panel" parent="."]
@@ -354,6 +354,6 @@ stream = ExtResource("5_q4h4s")
 autoplay = true
 
 [connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed"]
-[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed"]
 [connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed"]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed"]
 [connection signal="pressed" from="panelAcciones/acciones/huir" to="." method="_on_huir_pressed"]

@@ -101,6 +101,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ddi48")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1qvw3")
+autoplay = true
+
 [node name="fondo" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -114,14 +118,14 @@ expand_mode = 3
 [node name="contenedorNPC" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.718
-anchor_top = 0.5
-anchor_right = 0.718
-anchor_bottom = 0.5
-offset_left = 36.864
-offset_top = -97.0
-offset_right = 316.864
-offset_bottom = 183.0
+anchor_left = 0.75
+anchor_top = 0.35
+anchor_right = 0.993
+anchor_bottom = 0.782
+offset_left = -6.10352e-05
+offset_top = 0.199982
+offset_right = 0.0639648
+offset_bottom = 0.263947
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -130,16 +134,19 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 texture = ExtResource("4_r78bd")
-stretch_mode = 2
+stretch_mode = 4
 
 [node name="panelAcciones" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 23.0
-offset_top = 103.0
-offset_right = -355.0
-offset_bottom = 422.0
+anchors_preset = -1
+anchor_left = 0.356
+anchor_top = 0.405
+anchor_right = 0.356
+anchor_bottom = 0.405
+offset_left = -387.112
+offset_top = -159.44
+offset_right = 386.888
+offset_bottom = 159.56
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v0yq0")
 
@@ -221,14 +228,30 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
 text = "OBJETO 4"
 
+[node name="Button" type="Button" parent="panelAcciones"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.636
+anchor_top = 0.203
+anchor_right = 0.636
+anchor_bottom = 0.203
+offset_left = 191.736
+offset_top = -51.757
+offset_right = 243.736
+offset_bottom = -20.757
+text = "SALIR"
+
 [node name="textBox" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_left = 11.0
-offset_top = 497.0
-offset_right = -7.0
-offset_bottom = 638.0
+anchors_preset = -1
+anchor_left = 0.502
+anchor_top = 0.876
+anchor_right = 0.502
+anchor_bottom = 0.876
+offset_left = -567.304
+offset_top = -70.648
+offset_right = 566.696
+offset_bottom = 70.352
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0413b")
 
@@ -266,26 +289,14 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_1qvw3")
-autoplay = true
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 707.0
-offset_top = 116.0
-offset_right = 759.0
-offset_bottom = 147.0
-text = "SALIR"
-
-[connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_objeto_1_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_golpear_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_objeto_1_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_especial_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_objeto_2_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_bloquear_pressed"]
-[connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_especial_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_objeto_3_pressed"]
-[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_bloquear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_especial_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_objeto_4_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_bloquear_pressed"]
+[connection signal="pressed" from="panelAcciones/Button" to="." method="_on_button_pressed"]
