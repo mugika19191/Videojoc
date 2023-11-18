@@ -1,23 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://c5i88craack7d"]
+[gd_scene load_steps=17 format=3 uid="uid://bg0xi361vd8wv"]
 
-[ext_resource type="Script" path="res://scripts/combate.gd" id="1_3ew02"]
-[ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="1_hdh0s"]
-[ext_resource type="Resource" uid="uid://dy0fxohvul4uo" path="res://enemigos/1.tres" id="2_d2m7a"]
-[ext_resource type="Texture2D" uid="uid://cflfnfesx1t1f" path="res://imagenes/enemigos/Boss Abomination Aqua.png" id="4_bxytl"]
-[ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_q4h4s"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mducp"]
-bg_color = Color(0.854902, 0, 0.0980392, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x20"]
-bg_color = Color(0, 0.827451, 0, 1)
-border_width_left = 2
+[ext_resource type="Script" path="res://scripts/combateFinal.gd" id="1_c7vfw"]
+[ext_resource type="Resource" uid="uid://cxclb15ludq2e" path="res://enemigos/final.tres" id="2_l68is"]
+[ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="3_a6kxa"]
+[ext_resource type="Texture2D" uid="uid://bq3yrl5oeth15" path="res://imagenes/enemigos/Boss Skull Knight Xoer.png" id="4_66qmk"]
+[ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_qsc4e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0yq0"]
 bg_color = Color(0, 0, 0, 0.72549)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s60gd"]
-bg_color = Color(0.713726, 0.694118, 0.141176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m36hl"]
 bg_color = Color(0, 0, 0, 1)
@@ -28,6 +18,16 @@ border_width_bottom = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3e2cj"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mducp"]
+bg_color = Color(0.854902, 0, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1x20"]
+bg_color = Color(0, 0.827451, 0, 1)
+border_width_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s60gd"]
+bg_color = Color(0.713726, 0.694118, 0.141176, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0413b"]
 bg_color = Color(0, 0, 0, 1)
@@ -110,8 +110,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_3ew02")
-enemigo = ExtResource("2_d2m7a")
+script = ExtResource("1_c7vfw")
+enemigo = ExtResource("2_l68is")
 
 [node name="fondo" type="TextureRect" parent="."]
 layout_mode = 1
@@ -120,28 +120,75 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_hdh0s")
+texture = ExtResource("3_a6kxa")
 expand_mode = 3
+
+[node name="panelAcciones" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v0yq0")
+
+[node name="acciones" type="HBoxContainer" parent="panelAcciones"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_top = 11.0
+offset_right = -17.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="golpear" type="Button" parent="panelAcciones/acciones"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
+text = "GOLPEAR"
+
+[node name="especial" type="Button" parent="panelAcciones/acciones"]
+layout_mode = 2
+size_flags_horizontal = 3
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
+text = "ESPECIAL (15MPs)"
 
 [node name="contenedorVillano" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -140.0
-offset_top = -155.0
-offset_right = 239.0
-offset_bottom = 222.0
+anchor_bottom = 1.0
+offset_left = -313.5
+offset_top = -579.0
+offset_right = 313.5
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="ProgressBar" type="ProgressBar" parent="contenedorVillano"]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_mducp")
 theme_override_styles/fill = SubResource("StyleBoxFlat_e1x20")
+max_value = 200.0
 step = 1.0
 value = 50.0
 show_percentage = false
@@ -163,7 +210,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-texture = ExtResource("4_bxytl")
+texture = ExtResource("4_66qmk")
 stretch_mode = 2
 
 [node name="panelJugador" type="Panel" parent="."]
@@ -244,66 +291,6 @@ text = "PVs: 50/100"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="panelAcciones" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 82.0
-grow_horizontal = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_v0yq0")
-
-[node name="acciones" type="HBoxContainer" parent="panelAcciones"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 11.0
-offset_top = 11.0
-offset_right = -17.0
-offset_bottom = -13.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="golpear" type="Button" parent="panelAcciones/acciones"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
-text = "GOLPEAR"
-
-[node name="especial" type="Button" parent="panelAcciones/acciones"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
-text = "ESPECIAL (15MPs)"
-
-[node name="huir" type="Button" parent="panelAcciones/acciones"]
-layout_mode = 2
-size_flags_horizontal = 3
-focus_mode = 0
-mouse_default_cursor_shape = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_m36hl")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3e2cj")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_3e2cj")
-text = "HUIR"
-
 [node name="textBox" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 10
@@ -350,10 +337,9 @@ libraries = {
 anchor_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_q4h4s")
+stream = ExtResource("5_qsc4e")
 autoplay = true
 
 [connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed" flags=18]
 [connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed" flags=18]
 [connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed" flags=18]
-[connection signal="pressed" from="panelAcciones/acciones/huir" to="." method="_on_huir_pressed" flags=18]

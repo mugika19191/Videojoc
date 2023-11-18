@@ -15,7 +15,6 @@ var critProb = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	randomEnem()
 	setVida($contenedorVillano/ProgressBar, enemigo.vida, enemigo.vida)
 	setVida($panelJugador/datosJugador/ProgressBar, State.vida_actual, State.vida_max)
 	setMana($panelJugador/datosJugador/ProgressBar2, State.mana_actual, State.mana_max)
@@ -83,23 +82,6 @@ func turno_enemigo():
 		printearTexto("HAS MUERTO")
 		await Signal(self,"textbox_closed")
 		get_tree().quit()
-	
-
-func _on_huir_pressed():
-	var rng = RandomNumberGenerator.new()
-	var huir = 20 + State.des*20
-	if rng.randi_range(1,100) <= huir:
-		printearTexto("Escapaste manin")
-		await Signal(self,"textbox_closed")
-		self.visible=false	
-		$Camera2D.enabled=false
-		get_tree().paused=!get_tree().paused #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
-	else:
-		printearTexto("En el fulgor del encuentro no encuentras la oportunidad de huir")
-		await Signal(self,"textbox_closed")
-		turno_enemigo()
-		
-	
 
 
 func _on_golpear_pressed():

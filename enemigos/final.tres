@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cxclb15ludq2e"]
+
+[ext_resource type="Script" path="res://scripts/enemigoBase.gd" id="1_43xve"]
+[ext_resource type="Texture2D" uid="uid://bq3yrl5oeth15" path="res://imagenes/enemigos/Boss Skull Knight Xoer.png" id="2_8syw3"]
+
+[resource]
+script = ExtResource("1_43xve")
+nombre = "Enemy"
+sprite = ExtResource("2_8syw3")
+vida = 200
+"daño" = 15
+dinero = 666

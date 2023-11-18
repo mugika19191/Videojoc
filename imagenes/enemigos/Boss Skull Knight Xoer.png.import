@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c68avjrepngus"
-path.s3tc="res://.godot/imported/torre.png-d54d029ed67f3018498d252a9bba35f9.s3tc.ctex"
+uid="uid://bq3yrl5oeth15"
+path.s3tc="res://.godot/imported/Boss Skull Knight Xoer.png-3ebe44c1c9d4aab945aacde104f3d1aa.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://imagenes/torre.png"
-dest_files=["res://.godot/imported/torre.png-d54d029ed67f3018498d252a9bba35f9.s3tc.ctex"]
+source_file="res://imagenes/enemigos/Boss Skull Knight Xoer.png"
+dest_files=["res://.godot/imported/Boss Skull Knight Xoer.png-3ebe44c1c9d4aab945aacde104f3d1aa.s3tc.ctex"]
 
 [params]
 
