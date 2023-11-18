@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://2wvmiokl0hn0"]
+[gd_scene load_steps=16 format=3 uid="uid://2wvmiokl0hn0"]
 
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="2_4lmkd"]
 [ext_resource type="PackedScene" uid="uid://bmkr6g26ix3ow" path="res://3dAssests/base/rocks/rock_big.tscn" id="3_5qdwf"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://dklm21n2k80oa" path="res://nodos/character_3d_model.tscn" id="6_oaxgm"]
 [ext_resource type="PackedScene" uid="uid://bqn01vvlql12f" path="res://3dAssests/base/temple_pillars/templearc_top.tscn" id="7_n1jj8"]
 [ext_resource type="PackedScene" uid="uid://w5vf2ewsqj7h" path="res://3dAssests/base/stairs/temple_stairs_rail_top.tscn" id="8_0sbu1"]
+[ext_resource type="Script" path="res://scripts/NPC1.gd" id="9_o47e0"]
+[ext_resource type="Texture2D" uid="uid://dum3wensrqegx" path="res://imagenes/bocata.png" id="10_aphhp"]
+[ext_resource type="Texture2D" uid="uid://c01yhprgklkrv" path="res://imagenes/enemigos/Boss Blood Feral.png" id="11_kwjs5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n06cx"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -27,6 +30,8 @@ sdfgi_bounce_feedback = 0.34
 sdfgi_energy = 2.0
 glow_normalized = true
 glow_blend_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d8fui"]
 
 [node name="salafinal" type="Node3D"]
 
@@ -175,3 +180,25 @@ visible = false
 
 [node name="temple_stairs_rail_top" parent="." instance=ExtResource("8_0sbu1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.34739, -4.96257, -3.3675)
+
+[node name="NPC1" type="Node3D" parent="."]
+process_mode = 3
+transform = Transform3D(0.273918, 0, -0.0559167, 0, 0.222881, 0, 0.0325075, 0, 0.47117, 1.09211, 4.11358, -20.8345)
+script = ExtResource("9_o47e0")
+
+[node name="Sprite3D2" type="Sprite3D" parent="NPC1"]
+transform = Transform3D(0.235931, 0, 0, 0, 0.196686, 0, 0, 0, 0.590627, 0.852886, 1.68194, 0)
+visible = false
+texture = ExtResource("10_aphhp")
+
+[node name="Area3D" type="Area3D" parent="NPC1"]
+
+[node name="Sprite3D" type="Sprite3D" parent="NPC1/Area3D"]
+texture = ExtResource("11_kwjs5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC1/Area3D"]
+transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
+shape = SubResource("BoxShape3D_d8fui")
+
+[connection signal="area_entered" from="NPC1/Area3D" to="NPC1" method="_on_area_3d_area_entered" flags=18]
+[connection signal="area_exited" from="NPC1/Area3D" to="NPC1" method="_on_area_3d_area_exited" flags=18]
