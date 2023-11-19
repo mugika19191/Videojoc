@@ -4,7 +4,7 @@
 [ext_resource type="Resource" uid="uid://cxclb15ludq2e" path="res://enemigos/final.tres" id="2_l68is"]
 [ext_resource type="Texture2D" uid="uid://dnynwyk62k5ht" path="res://imagenes/cripta.jpeg" id="3_a6kxa"]
 [ext_resource type="Texture2D" uid="uid://bq3yrl5oeth15" path="res://imagenes/enemigos/Boss Skull Knight Xoer.png" id="4_66qmk"]
-[ext_resource type="AudioStream" uid="uid://ce5s0ogdruitm" path="res://Musica/batalla remix con shin.mp3" id="5_qsc4e"]
+[ext_resource type="AudioStream" uid="uid://b7apps0ixk3qc" path="res://Musica/EnemigoFinal.mp3" id="5_77tpa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v0yq0"]
 bg_color = Color(0, 0, 0, 0.72549)
@@ -337,9 +337,9 @@ libraries = {
 anchor_mode = 0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_qsc4e")
+stream = ExtResource("5_77tpa")
 autoplay = true
 
 [connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed" flags=18]
-[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed" flags=18]
 [connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed" flags=18]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed" flags=18]
