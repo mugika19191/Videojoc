@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://jmhjsyctl5xv"]
+[gd_scene load_steps=13 format=3 uid="uid://jmhjsyctl5xv"]
 
 [ext_resource type="Script" path="res://scripts/pause.gd" id="1_0q52o"]
 [ext_resource type="Texture2D" uid="uid://bsgtbasawavsm" path="res://imagenes/back.png" id="2_y5nnr"]
 [ext_resource type="FontFile" uid="uid://ca8tydt4ec58w" path="res://GermaniaOne-Regular.ttf" id="3_4anae"]
+[ext_resource type="Texture2D" uid="uid://b2s12m1s7f1vq" path="res://imagenes/enemigos/Boss Mythical Knight Goldnharl.png" id="4_1ohvh"]
 
 [sub_resource type="Animation" id="Animation_by8ns"]
 resource_name = "RESET"
@@ -95,6 +96,19 @@ _data = {
 "menu_pausa_out": SubResource("Animation_e7v7b")
 }
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytht1"]
+bg_color = Color(0, 0, 0, 0.72549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tgstc"]
+bg_color = Color(0.854902, 0, 0.0980392, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8anxm"]
+bg_color = Color(0, 0.827451, 0, 1)
+border_width_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_71a7l"]
+bg_color = Color(0.713726, 0.694118, 0.141176, 1)
+
 [node name="Pause" type="Control"]
 process_mode = 3
 layout_mode = 3
@@ -116,6 +130,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_y5nnr")
 expand_mode = 2
+
+[node name="BossMythicalKnightGoldnharl" type="Sprite2D" parent="TextureRect"]
+position = Vector2(469, 378)
+scale = Vector2(2.63712, 3.15401)
+texture = ExtResource("4_1ohvh")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -162,8 +181,8 @@ anchor_right = 0.839
 anchor_bottom = 0.468
 offset_left = -106.528
 offset_top = -247.264
-offset_right = 107.472
-offset_bottom = 268.736
+offset_right = 184.472
+offset_bottom = 262.736
 grow_horizontal = 0
 grow_vertical = 2
 
@@ -182,6 +201,19 @@ theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Destreza:"
 
+[node name="DestrezaUp" type="Button" parent="VBoxContainer/Destreza"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.449
+anchor_right = 0.89
+anchor_bottom = 0.449
+offset_left = -24.4599
+offset_top = -15.511
+offset_right = 24.5401
+offset_bottom = 15.489
+text = "Subir"
+
 [node name="Fuerza" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
@@ -189,6 +221,19 @@ theme_override_colors/font_color = Color(0.792157, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Fuerza:"
+
+[node name="FuerzaUp" type="Button" parent="VBoxContainer/Fuerza"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.449
+anchor_right = 0.89
+anchor_bottom = 0.449
+offset_left = -24.4599
+offset_top = -15.511
+offset_right = 24.5401
+offset_bottom = 15.489
+text = "Subir"
 
 [node name="Inteligencia" type="Label" parent="VBoxContainer"]
 clip_contents = true
@@ -198,6 +243,19 @@ theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Inteligencia:"
 
+[node name="InteligenciaUp" type="Button" parent="VBoxContainer/Inteligencia"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.449
+anchor_right = 0.89
+anchor_bottom = 0.449
+offset_left = -24.4599
+offset_top = -15.511
+offset_right = 24.5401
+offset_bottom = 15.489
+text = "Subir"
+
 [node name="Poder" type="Label" parent="VBoxContainer"]
 clip_contents = true
 layout_mode = 2
@@ -205,6 +263,19 @@ theme_override_colors/font_color = Color(0.65098, 0.290196, 0.631373, 1)
 theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Poder:"
+
+[node name="PoderUp" type="Button" parent="VBoxContainer/Poder"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.449
+anchor_right = 0.89
+anchor_bottom = 0.449
+offset_left = -24.4599
+offset_top = -15.511
+offset_right = 24.5401
+offset_bottom = 15.489
+text = "Subir"
 
 [node name="Dinero" type="Label" parent="VBoxContainer"]
 clip_contents = true
@@ -222,5 +293,104 @@ theme_override_fonts/font = ExtResource("3_4anae")
 theme_override_font_sizes/font_size = 30
 text = "Inventario:"
 
+[node name="panelJugador" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ytht1")
+
+[node name="datosJugador" type="HBoxContainer" parent="panelJugador"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Vida" type="ProgressBar" parent="panelJugador/datosJugador"]
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_tgstc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8anxm")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="panelJugador/datosJugador/Vida"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "PVs: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mana" type="ProgressBar" parent="panelJugador/datosJugador"]
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_tgstc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_71a7l")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="panelJugador/datosJugador/Mana"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "PVs: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Experiencia" type="ProgressBar" parent="panelJugador/datosJugador"]
+custom_minimum_size = Vector2(300, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_tgstc")
+theme_override_styles/fill = SubResource("StyleBoxFlat_8anxm")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="panelJugador/datosJugador/Experiencia"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "PVs: 50/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Destreza/DestrezaUp" to="." method="_on_destreza_up_pressed"]
+[connection signal="pressed" from="VBoxContainer/Fuerza/FuerzaUp" to="." method="_on_fuerza_up_pressed"]
+[connection signal="pressed" from="VBoxContainer/Inteligencia/InteligenciaUp" to="." method="_on_inteligencia_up_pressed"]
+[connection signal="pressed" from="VBoxContainer/Poder/PoderUp" to="." method="_on_poder_up_pressed"]

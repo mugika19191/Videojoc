@@ -10,3 +10,4 @@ sprite = ExtResource("2_8syw3")
 vida = 200
 "daño" = 15
 dinero = 666
+experiencia = 1000

@@ -5,3 +5,4 @@ extends Resource
 @export var vida = 20
 @export var daño = 5
 @export var dinero = 10
+@export var experiencia = 10

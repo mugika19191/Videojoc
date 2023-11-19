@@ -54,7 +54,12 @@ func _input(event):
 func printearTexto(texto):
 	$textBox.show()
 	$textBox/Label.text = texto
-
+func ganar_exp():
+	State.exp= State.exp+enemigo.experiencia
+	while State.exp >=100:
+		State.exp = State.exp-100
+		State.puntosNivel=State.puntosNivel+1
+	
 func turno_enemigo():
 	printearTexto("Te golpean con %d de daño" % enemigo.daño)
 	await Signal(self,"textbox_closed")
@@ -93,7 +98,9 @@ func _on_huir_pressed():
 		await Signal(self,"textbox_closed")
 		self.visible=false	
 		$Camera2D.enabled=false
-		get_tree().paused=!get_tree().paused #Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
+		$AudioStreamPlayer.stop()
+		get_tree().paused=!get_tree().paused 
+		#Aquí en lugar de salir del juego, pues salir del combate de vuelta a la escena 3D
 	else:
 		printearTexto("En el fulgor del encuentro no encuentras la oportunidad de huir")
 		await Signal(self,"textbox_closed")
@@ -147,6 +154,7 @@ func _on_golpear_pressed():
 		State.vida_actual = vidaActualJugador
 		State.mana_actual = manaActual
 		State.dinero = State.dinero + enemigo.dinero
+		ganar_exp()
 		print(State.dinero)
 		printearTexto("Derrotaste al enemigo, ¡ENHORABUENA!")
 		await Signal(self,"textbox_closed")
@@ -184,4 +192,5 @@ func randomEnem():
 	var com=0
 	com=rng.randi_range(0,3)
 	enemigo=load("res://enemigos/"+str(com)+".tres")
+	
 	

@@ -17,6 +17,8 @@ var des = 0
 var fue = 0
 var itg = 0
 var pod = 0
+var exp = 0
+var puntosNivel=1
 
 var velocidad = 10
 var defensa = 2
