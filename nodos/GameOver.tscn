@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://bto2ui3dfo4f1"]
+
+[ext_resource type="FontFile" uid="uid://ca8tydt4ec58w" path="res://GermaniaOne-Regular.ttf" id="1_05d5m"]
+[ext_resource type="AudioStream" uid="uid://cxbo26y82p0bb" path="res://Musica/Charla 1 o Intro.mp3" id="2_v2dc1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -13.0
+offset_right = 46.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_05d5m")
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -217.5
+offset_top = -120.0
+offset_right = 217.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_05d5m")
+theme_override_font_sizes/font_size = 50
+text = "Mejor pásate a la petanca..."
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_v2dc1")
+autoplay = true

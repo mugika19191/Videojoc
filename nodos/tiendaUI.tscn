@@ -289,14 +289,14 @@ libraries = {
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
 
-[connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_objeto_1_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosArriba/objeto1" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_objeto_2_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_bloquear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosArriba/objeto2" to="." method="_on_especial_pressed"]
-[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_objeto_3_pressed"]
-[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_bloquear_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto3" to="." method="_on_golpear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_objeto_4_pressed"]
+[connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_bloquear_pressed"]
 [connection signal="pressed" from="panelAcciones/objetosAbajo/objeto4" to="." method="_on_especial_pressed"]
 [connection signal="pressed" from="panelAcciones/Button" to="." method="_on_button_pressed"]

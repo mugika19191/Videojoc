@@ -82,7 +82,7 @@ func turno_enemigo():
 		await Signal(self,"textbox_closed")
 		printearTexto("HAS MUERTO")
 		await Signal(self,"textbox_closed")
-		get_tree().quit()
+		AnimationLevel.change_scene_to_file("res://nodos/GameOver.tscn")
 	
 
 func _on_huir_pressed():

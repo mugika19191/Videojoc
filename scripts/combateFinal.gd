@@ -81,7 +81,7 @@ func turno_enemigo():
 		await Signal(self,"textbox_closed")
 		printearTexto("HAS MUERTO")
 		await Signal(self,"textbox_closed")
-		get_tree().quit()
+		AnimationLevel.change_scene_to_file("res://nodos/GameOver.tscn")
 
 
 func _on_golpear_pressed():
@@ -133,9 +133,9 @@ func _on_golpear_pressed():
 		printearTexto("Derrotaste al enemigo, ¡ENHORABUENA!")
 		await Signal(self,"textbox_closed")
 		self.visible=false
-		get_tree().paused=!get_tree().paused
 		$Camera2D.enabled=false
 		$AudioStreamPlayer.stop()
+		AnimationLevel.change_scene_to_file("res://nodos/Victoria.tscn")
 	turno_enemigo()
 
 
