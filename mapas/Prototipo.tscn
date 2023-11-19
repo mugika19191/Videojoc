@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dxq15tet3suwm"]
+[gd_scene load_steps=33 format=3 uid="uid://dxq15tet3suwm"]
 
 [ext_resource type="Script" path="res://scripts/Encounters.gd" id="1_1tuqx"]
 [ext_resource type="PackedScene" uid="uid://5hdqdkxolsdv" path="res://nodos/character_body_3d.tscn" id="1_ajtw4"]
@@ -26,6 +26,8 @@
 [ext_resource type="Texture2D" uid="uid://dum3wensrqegx" path="res://imagenes/bocata.png" id="22_kct1u"]
 [ext_resource type="Texture2D" uid="uid://b0pwexesk5y5g" path="res://imagenes/enemigos/Tribal Elves Dagger.png" id="23_dekdt"]
 [ext_resource type="Texture2D" uid="uid://ohhyibxbrrks" path="res://imagenes/enemigos/Megapack III Dragonslayer Dwarf.png" id="24_to0lh"]
+[ext_resource type="Script" path="res://scripts/NPCH.gd" id="25_yukdh"]
+[ext_resource type="Texture2D" uid="uid://c28w3m4xglc0q" path="res://imagenes/enemigos/Arcane Crystal Magic Circle.png" id="26_d3j63"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ryq8w"]
 sky_top_color = Color(0.678431, 0.439216, 0.0784314, 1)
@@ -589,6 +591,30 @@ texture = ExtResource("24_to0lh")
 transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
 shape = SubResource("BoxShape3D_5131e")
 
+[node name="NPC3" type="Node3D" parent="."]
+process_mode = 3
+transform = Transform3D(0.216618, 0, 0.0774673, 0, 0.161141, 0, -0.0168314, 0, 0.996995, -0.30141, 0.321336, -10.347)
+script = ExtResource("25_yukdh")
+Dialogo = "Sientes que la tus heridas se han curado. &&El cristal te desea buena suerte."
+DialogBBC = "Sientes que la tus heridas se han curado. &&El cristal te desea buena suerte."
+Nombre = "[b]Crsital[/b]"
+
+[node name="Sprite3D2" type="Sprite3D" parent="NPC3"]
+transform = Transform3D(0.235931, 0, 0, 0, 0.196686, 0, 0, 0, 0.590627, 0.852886, 1.68194, 0)
+visible = false
+texture = ExtResource("22_kct1u")
+
+[node name="Area3D" type="Area3D" parent="NPC3"]
+transform = Transform3D(1.05903, 0, 7.45058e-09, 0, 0.999999, 0, -3.72529e-09, 0, 0.240261, 0.160004, 0, -0.447414)
+
+[node name="Sprite3D" type="Sprite3D" parent="NPC3/Area3D"]
+transform = Transform3D(1.34805, 0, 3.8743e-07, 0, 2.35014, 0, -2.23517e-08, 0, 1.02522, 0.249383, 1.34996, -0.697339)
+texture = ExtResource("26_d3j63")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NPC3/Area3D"]
+transform = Transform3D(2.65974, 0, 0, 0, 2.61922, 0, 0, 0, 0.523237, 0, 0, 0)
+shape = SubResource("BoxShape3D_5131e")
+
 [node name="Tienda" parent="." instance=ExtResource("21_feryn")]
 transform = Transform3D(0.217271, 0, 0, 0, 0.161141, 0, 0, 0, 1, 6.26656, 0.196841, -18.903)
 script = ExtResource("22_fllvu")
@@ -599,3 +625,5 @@ combate = ExtResource("2_ruxoa")
 [connection signal="area_exited" from="NPC1/Area3D" to="NPC1" method="_on_area_3d_area_exited" flags=18]
 [connection signal="area_entered" from="NPC2/Area3D" to="NPC2" method="_on_area_3d_area_entered" flags=18]
 [connection signal="area_exited" from="NPC2/Area3D" to="NPC2" method="_on_area_3d_area_exited" flags=18]
+[connection signal="area_entered" from="NPC3/Area3D" to="NPC3" method="_on_area_3d_area_entered" flags=18]
+[connection signal="area_exited" from="NPC3/Area3D" to="NPC3" method="_on_area_3d_area_exited" flags=18]

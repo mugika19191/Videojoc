@@ -9,4 +9,4 @@ nombre = "Enemy"
 sprite = ExtResource("2_7jrsc")
 vida = 45
 "daño" = 6
-dinero = 10
+dinero = 20

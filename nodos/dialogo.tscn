@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dytjcl0fwj4m8"]
 
-[ext_resource type="Texture2D" uid="uid://dk1xrg8ll5o4w" path="res://imagenes/rpgportraits.png" id="1_2h0hh"]
 [ext_resource type="Script" path="res://scripts/SingletonDialog.gd" id="1_c0br0"]
+[ext_resource type="Texture2D" uid="uid://bthyqbhyec257" path="res://imagenes/enemigos/Voidoll Erebia.png" id="2_o15lw"]
 [ext_resource type="Texture2D" uid="uid://cln0t4lcts6v3" path="res://imagenes/flecha.png" id="3_dq2in"]
 
 [sub_resource type="Gradient" id="Gradient_52s37"]
 offsets = PackedFloat32Array(0, 0.148387)
-colors = PackedColorArray(1, 1, 1, 0.392157, 1, 1, 1, 0.392157)
+colors = PackedColorArray(0.622881, 0.622881, 0.622881, 0.392157, 1, 1, 1, 0.392157)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_q6mfc"]
 gradient = SubResource("Gradient_52s37")
@@ -85,10 +85,9 @@ texture = SubResource("GradientTexture2D_q6mfc")
 
 [node name="Sprite2D" type="Sprite2D" parent="Dialog/back"]
 texture_filter = 1
-position = Vector2(125, 105)
-scale = Vector2(4.69375, 4.31678)
-texture = ExtResource("1_2h0hh")
-region_enabled = true
+position = Vector2(114, 101)
+scale = Vector2(1.91257, 2.37086)
+texture = ExtResource("2_o15lw")
 region_rect = Rect2(0, 0, 40, 38)
 
 [node name="TextBox" type="RichTextLabel" parent="Dialog/back"]

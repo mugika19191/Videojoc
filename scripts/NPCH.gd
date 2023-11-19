@@ -1,5 +1,4 @@
 extends Node3D
-
 @export var Dialogo: String
 @export var DialogBBC: String
 @export var Nombre: String
@@ -10,15 +9,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $Sprite3D2.visible && Input.is_action_just_pressed("ui_accept") && !get_tree().paused:
-		Dialog.LoadData(Dialogo,DialogBBC,Nombre)
-		Dialog.StartDialog()
-		get_tree().paused=!get_tree().paused
+	pass
 
 func _on_area_3d_area_entered(area):
 	# Replace with function body.
-	$Sprite3D2.visible=true
-	
+	Dialog.LoadData(Dialogo,DialogBBC,Nombre)
+	Dialog.StartDialog()
+	get_tree().paused=!get_tree().paused
+	State.vida_actual=State.vida_max
 
-func _on_area_3d_area_exited(area):
-	$Sprite3D2.visible=false

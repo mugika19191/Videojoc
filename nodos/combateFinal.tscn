@@ -341,5 +341,5 @@ stream = ExtResource("5_qsc4e")
 autoplay = true
 
 [connection signal="pressed" from="panelAcciones/acciones/golpear" to="." method="_on_golpear_pressed" flags=18]
-[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed" flags=18]
 [connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_especial_pressed" flags=18]
+[connection signal="pressed" from="panelAcciones/acciones/especial" to="." method="_on_bloquear_pressed" flags=18]
